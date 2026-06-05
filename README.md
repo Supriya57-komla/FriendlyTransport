@@ -13,7 +13,7 @@
 
 Welcome to the GitHub repository for my personal portfolio! Designed with a futuristic **Aurora Glass AI** theme, this website acts as a digital resume and showcasing hub for my engineering projects, certifications, and technical skills.
 
-🔗 **Live Link:** [komala-supriya.lovable.app](https://komala-supriya.lovable.app)
+🔗 **Live Link:** [supriyaweb.netlify.app](https://supriyaweb.netlify.app/)
 
 ---
 
@@ -84,7 +84,7 @@ If you are looking to collaborate, hire, or simply connect, feel free to reach o
 *   **📞 Phone:** +91 9676484536
 *   **💼 LinkedIn:** [komala-supriya](https://www.linkedin.com/in/komala-supriya)
 *   **🐙 GitHub:** [Supriya57-komla](https://github.com/Supriya57-komla)
-*   **🌐 Live Portfolio:** [komala-supriya.lovable.app](https://komala-supriya.lovable.app)
+*   **🌐 Live Portfolio:** [supriyaweb.netlify.app](https://supriyaweb.netlify.app/)
 
 ---
 
