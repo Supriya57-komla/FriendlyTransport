@@ -340,9 +340,23 @@
     .review-testi-text { font-size: 12px; line-height: 1.6; color: var(--s600); font-style: italic; }
     
     /* NEWSLETTER */
-    .newsletter-card { margin-top: 28px; border-radius: var(--radius-xl); padding: 24px 16px; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 10px; position: relative; overflow: hidden; background: linear-gradient(135deg, var(--g900), var(--g950)); color: #fff; }
-    .newsletter-card h3 { font-size: 18px; font-weight: 800; color: #fff; }
-    .newsletter-card p { font-size: 13px; color: rgba(255,255,255,.7); max-width: 440px; margin-bottom: 8px; }
+    .newsletter-card {
+      margin-top: 4rem;
+      border-radius: 0 !important;
+      padding: 60px 20px !important;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      position: relative;
+      overflow: hidden;
+      background: linear-gradient(135deg, var(--g900), var(--g950));
+      color: #fff;
+    }
+    .newsletter-card h3 { font-size: 22px; font-weight: 800; color: #fff; }
+    .newsletter-card p { font-size: 14px; color: rgba(255,255,255,.75); max-width: 500px; margin-bottom: 8px; line-height: 1.5; }
     .newsletter-form { display: flex; width: 100%; max-width: 460px; background: rgba(255, 255, 255, 0.15); border: 1px solid rgba(255,255,255,0.25); border-radius: 30px; padding: 5px; }
     .newsletter-input { flex: 1; padding: 10px 16px; font-size: 13px; color: #fff; font-weight: 500; }
     .newsletter-input::placeholder { color: rgba(255,255,255,0.6); }
@@ -605,7 +619,8 @@
         margin-bottom: 20px !important;
       }
       .newsletter-card {
-        padding: 24px 16px !important;
+        padding: 40px 16px !important;
+        margin-top: 2rem !important;
       }
       .newsletter-card h3 {
         font-size: 18px !important;
@@ -614,8 +629,28 @@
 
     /* Unified Responsive Grid & Card Styling */
     html, body {
+      width: 100%;
       max-width: 100vw;
       overflow-x: hidden;
+      margin: 0;
+      padding: 0;
+    }
+
+    #storefront {
+      display: flex !important;
+      flex-direction: column !important;
+      align-items: stretch !important;
+      width: 100% !important;
+      max-width: 100% !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      overflow-x: hidden !important;
+    }
+
+    #promo-bar, .hero-wrapper, #navbar, .newsletter-card, .site-footer {
+      width: 100% !important;
+      max-width: 100% !important;
+      box-sizing: border-box !important;
     }
 
     #product-grid, .carousel-grid, .deals-grid-container {
@@ -645,12 +680,7 @@
         grid-template-columns: repeat(2, 1fr) !important;
         gap: 12px !important;
       }
-      #storefront {
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: stretch !important;
-      }
-      #promo-bar, .hero-wrapper, #navbar, .nav-inner, .hdept-row, .main-wrap, .newsletter-card, .site-footer {
+      .nav-inner, .hdept-row, .main-wrap {
         width: 100% !important;
         max-width: 100% !important;
         box-sizing: border-box !important;
@@ -1028,16 +1058,6 @@
         </div>
       </section>
 
-      <!-- NEWSLETTER SUBSCRIPTION -->
-      <section class="newsletter-card fade-up">
-        <h3>Subscribe to our Fresh Newsletter</h3>
-        <p>Sign up now to receive fresh notifications, discount alerts, and an instant ₹50 voucher directly in your inbox.</p>
-        <form class="newsletter-form" onsubmit="handleNewsletter(event)">
-          <input class="newsletter-input" type="email" id="news-email" required placeholder="Enter your email address...">
-          <button class="newsletter-btn" type="submit">Subscribe</button>
-        </form>
-      </section>
-      
         </div> <!-- end .store-main-col -->
         
         <aside class="store-order-hub fade-up">
@@ -1057,6 +1077,16 @@
         </aside>
       </div> <!-- end .store-grid -->
     </main>
+
+    <!-- NEWSLETTER SUBSCRIPTION (BOTTOM HERO BANNER) -->
+    <section class="newsletter-card fade-up">
+      <h3>Subscribe to our Fresh Newsletter</h3>
+      <p>Sign up now to receive fresh notifications, discount alerts, and an instant ₹50 voucher directly in your inbox.</p>
+      <form class="newsletter-form" onsubmit="handleNewsletter(event)">
+        <input class="newsletter-input" type="email" id="news-email" required placeholder="Enter your email address...">
+        <button class="newsletter-btn" type="submit">Subscribe</button>
+      </form>
+    </section>
 
     <footer class="site-footer">
       <div class="footer-grid">
