@@ -538,6 +538,50 @@
     .order-hub-empty span { font-size: 36px; }
     .order-hub-empty h3 { font-size: 13px; font-weight: 700; color: var(--s700); }
     .order-hub-empty p { font-size: 11px; max-width: 220px; line-height: 1.5; }
+
+    /* General Mobile Responsiveness Tweaks */
+    @media(max-width: 640px) {
+      .main-wrap {
+        padding: 12px 10px;
+      }
+      .section-title, .section-title-wrap h2 {
+        font-size: 18px !important;
+      }
+      .welcome-banner {
+        font-size: 11px;
+        padding: 10px 12px;
+      }
+      .hero-wrapper {
+        height: 180px !important;
+      }
+      .home-categories-grid {
+        grid-template-columns: repeat(auto-fill, minmax(90px, 1fr)) !important;
+        gap: 10px !important;
+      }
+      .home-cat-card {
+        padding: 8px !important;
+      }
+      .home-cat-img-wrap {
+        width: 44px !important;
+        height: 44px !important;
+      }
+      .home-cat-name {
+        font-size: 10px !important;
+      }
+      .home-cat-count {
+        font-size: 8px !important;
+      }
+      .deals-banner {
+        padding: 14px !important;
+        margin-bottom: 20px !important;
+      }
+      .newsletter-card {
+        padding: 24px 16px !important;
+      }
+      .newsletter-card h3 {
+        font-size: 18px !important;
+      }
+    }
   </style>
 </head>
 <body>
