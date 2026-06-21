@@ -94,6 +94,30 @@
     /* NAVBAR */
     #navbar { position: sticky; top: 0; z-index: 100; border-bottom: 1px solid var(--s200); }
     .nav-inner { max-width: 1440px; margin: 0 auto; padding: 0 20px; height: 72px; display: flex; align-items: center; gap: 14px; }
+    @media(max-width: 767px) {
+      .nav-inner {
+        height: auto;
+        flex-wrap: wrap;
+        padding: 10px 15px 12px;
+        gap: 10px;
+      }
+      .search-wrap {
+        order: 3;
+        flex-basis: 100%;
+        max-width: 100%;
+      }
+      .nav-logo {
+        order: 1;
+      }
+      .nav-right {
+        order: 2;
+        margin-left: auto;
+        gap: 4px;
+      }
+      #logout-nav-btn {
+        display: none;
+      }
+    }
     .nav-logo { display: flex; align-items: center; gap: 10px; flex-shrink: 0; }
     .logo-img-wrap { width: 44px; height: 44px; border-radius: 14px; overflow: hidden; display: flex; align-items: center; justify-content: center; font-size: 24px; color: #fff; background: linear-gradient(135deg, var(--g700), var(--g500)); box-shadow: 0 4px 12px rgba(22,163,74,.25); }
     .logo-text { display: none; }
@@ -679,7 +703,7 @@
             <button class="nav-icon-btn" onclick="openOrders()" title="My Orders">📦<span id="order-badge" class="nav-badge" style="display:none"></span></button>
             <button class="nav-icon-btn" onclick="openProfile()" title="My Profile">👤</button>
             <button id="admin-btn" class="nav-icon-btn" onclick="openAdmin()" title="Admin Console" style="display:none">🔑</button>
-            <button class="nav-icon-btn" onclick="confirmLogout()" title="Sign Out" style="color:#ef4444">🚪</button>
+            <button id="logout-nav-btn" class="nav-icon-btn" onclick="confirmLogout()" title="Sign Out" style="color:#ef4444">🚪</button>
             <button class="btn-cart" onclick="openCart()">🛒<span id="cart-badge" class="cart-count-badge">0</span><span id="cart-total-nav" style="font-family:'Outfit',sans-serif">₹0</span></button>
           </div>
         </div>
@@ -1140,7 +1164,10 @@
             <div><label class="c-label">Update Display Name</label><input id="p-edit-name" class="c-input" required placeholder="Display Name"></div>
             <div><label class="c-label">Email Address</label><input id="p-edit-email" class="c-input" disabled style="background:var(--s200); opacity:0.7"></div>
             <div><label class="c-label">Phone Number</label><input id="p-edit-phone" class="c-input" placeholder="+91 98765 43210"></div>
-            <button class="gradient-btn" type="submit" style="padding:10px 16px; font-size:12px; margin-top:6px">Save Profile Details</button>
+            <div style="display:flex; gap:10px; flex-wrap:wrap">
+              <button class="gradient-btn" type="submit" style="padding:10px 16px; font-size:12px; margin-top:6px; flex:1">Save Profile Details</button>
+              <button class="gradient-btn" type="button" onclick="confirmLogout()" style="padding:10px 16px; font-size:12px; margin-top:6px; flex:1; background:linear-gradient(135deg, #ef4444, #dc2626)">Sign Out 🚪</button>
+            </div>
           </form>
           <div style="margin-top:20px">
             <div style="font-size:11px; font-weight:800; text-transform:uppercase; color:var(--s500); margin-bottom:8px">🏡 Saved Delivery Addresses</div>
@@ -2171,11 +2198,33 @@
     }
 
     function filterCat(cat) {
+      // Close any open drawers or modals so user goes directly to the catalog
+      if (typeof closeProfile === 'function') closeProfile();
+      if (typeof closeAdmin === 'function') closeAdmin();
+      
+      const cartDrawer = document.getElementById('cart-drawer');
+      const cartOverlay = document.getElementById('cart-overlay');
+      if (cartDrawer) cartDrawer.classList.remove('open');
+      if (cartOverlay) cartOverlay.classList.remove('show');
+      
+      const ordersDrawer = document.getElementById('orders-drawer');
+      const ordersOverlay = document.getElementById('orders-overlay');
+      if (ordersDrawer) ordersDrawer.classList.remove('open');
+      if (ordersOverlay) ordersOverlay.classList.remove('show');
+
       withLoader(() => {
         activeCat = cat;
         document.getElementById('cat-title').textContent = CAT_TITLES[cat] || cat;
         document.querySelectorAll('.hdept-btn').forEach(b => b.classList.toggle('active', b.getAttribute('data-cat') === cat));
         renderCatalog();
+        
+        // Smoothly scroll to the catalog title
+        setTimeout(() => {
+          const target = document.getElementById('cat-title');
+          if (target) {
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        }, 100);
       });
     }
     function toggleDeals(v) { dealsOnly = v; renderCatalog(); }
