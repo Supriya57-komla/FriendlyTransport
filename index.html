@@ -582,6 +582,48 @@
         font-size: 18px !important;
       }
     }
+
+    /* Unified Responsive Grid & Card Styling */
+    html, body {
+      max-width: 100vw;
+      overflow-x: hidden;
+    }
+
+    #product-grid, .carousel-grid, .deals-grid-container {
+      display: grid !important;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)) !important;
+      gap: 20px !important;
+      width: 100% !important;
+      overflow-x: visible !important;
+    }
+
+    .deal-mini-card {
+      min-width: 0 !important;
+      width: 100% !important;
+    }
+
+    .p-img, .deal-mini-img, .home-cat-img-wrap img, img.slide-bg {
+      width: 100% !important;
+      object-fit: cover !important;
+    }
+    
+    .deal-mini-img, .home-cat-img-wrap img {
+      height: auto !important;
+    }
+
+    @media(max-width: 767px) {
+      #product-grid, .carousel-grid, .deals-grid-container {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 12px !important;
+      }
+    }
+
+    @media(max-width: 479px) {
+      #product-grid, .carousel-grid, .deals-grid-container {
+        grid-template-columns: 1fr !important;
+        gap: 16px !important;
+      }
+    }
   </style>
 </head>
 <body>
