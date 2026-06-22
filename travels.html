@@ -1,0 +1,3941 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vamsi Travels — Premium Tirupati Travel & Darshan Packages</title>
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Your trusted Tirupati travel partner. Book premium cab services, Tirupati VIP Darshan packages, and customized South Indian temple tours with reliability, comfort, and best-in-class service.">
+  <meta name="keywords" content="Tirupati travels, Tirupati Darshan package, Tirupati car rentals, Tirupati tour packages, Vamsi travels Tirupati, Tirupati cab services">
+  <meta name="author" content="Vamsi Travels">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
+  <style>
+    /* ==========================================
+       DESIGN SYSTEM & VARIABLES
+       ========================================== */
+    :root {
+      /* Colors */
+      --primary: #0F172A;       /* Slate 900 */
+      --secondary: #2563EB;     /* Blue 600 */
+      --secondary-hover: #1D4ED8;
+      --accent: #F59E0B;        /* Amber 500 */
+      --accent-hover: #D97706;
+      --bg-main: #F8FAFC;       /* Slate 50 */
+      --text-main: #1E293B;     /* Slate 800 */
+      --text-muted: #64748B;    /* Slate 500 */
+      --white: #FFFFFF;
+      --border-light: rgba(226, 232, 240, 0.8);
+      
+      /* Typography */
+      --font-heading: 'Poppins', sans-serif;
+      --font-body: 'Inter', sans-serif;
+      
+      /* Shadows */
+      --shadow-sm: 0 1px 3px rgba(15, 23, 42, 0.05);
+      --shadow-md: 0 4px 6px -1px rgba(15, 23, 42, 0.08), 0 2px 4px -1px rgba(15, 23, 42, 0.04);
+      --shadow-lg: 0 10px 15px -3px rgba(15, 23, 42, 0.08), 0 4px 6px -2px rgba(15, 23, 42, 0.04);
+      --shadow-xl: 0 25px 50px -12px rgba(15, 23, 42, 0.12);
+      
+      /* Glassmorphism Defaults */
+      --glass-bg: rgba(255, 255, 255, 0.75);
+      --glass-border: rgba(255, 255, 255, 0.4);
+      --glass-blur: blur(16px);
+      
+      /* Transitions */
+      --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+      --transition-normal: 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+      --transition-slow: 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    /* Reset & Base Styles */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body {
+      font-family: var(--font-body);
+      background-color: var(--bg-main);
+      color: var(--text-main);
+      overflow-x: hidden;
+      line-height: 1.6;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      font-family: var(--font-heading);
+      color: var(--primary);
+      font-weight: 700;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+      transition: var(--transition-fast);
+    }
+
+    img, video {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    button, input, select, textarea {
+      font-family: inherit;
+      font-size: inherit;
+      outline: none;
+      border: none;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    /* Container Utility */
+    .container {
+      width: 100%;
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    /* Section Typography */
+    .section {
+      padding: 7rem 0;
+      position: relative;
+    }
+
+    .section-header {
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto 4rem auto;
+    }
+
+    .section-header h2 {
+      font-size: 40px;
+      line-height: 1.2;
+      margin-bottom: 1rem;
+      position: relative;
+      display: inline-block;
+    }
+    
+    .section-header h2::after {
+      content: '';
+      display: block;
+      width: 60px;
+      height: 4px;
+      background: var(--secondary);
+      margin: 0.75rem auto 0 auto;
+      border-radius: 2px;
+    }
+
+    .section-header p {
+      color: var(--text-muted);
+      font-size: 18px;
+    }
+
+    /* Buttons Style */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 0.875rem 2rem;
+      font-weight: 600;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: var(--transition-normal);
+      font-size: 16px;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .btn-primary {
+      background-color: var(--secondary);
+      color: var(--white);
+    }
+
+    .btn-primary:hover {
+      background-color: var(--secondary-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 10px 20px rgba(37, 99, 235, 0.2);
+    }
+
+    .btn-outline {
+      border: 2px solid var(--white);
+      color: var(--white);
+      background-color: transparent;
+      backdrop-filter: blur(4px);
+    }
+
+    .btn-outline:hover {
+      background-color: var(--white);
+      color: var(--primary);
+      transform: translateY(-2px);
+      box-shadow: 0 10px 20px rgba(255, 255, 255, 0.15);
+    }
+
+    .btn-accent {
+      background-color: var(--accent);
+      color: var(--primary);
+    }
+
+    .btn-accent:hover {
+      background-color: var(--accent-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 10px 20px rgba(245, 158, 11, 0.2);
+    }
+
+    /* ==========================================
+       SCROLL REVEAL ANIMATIONS
+       ========================================== */
+    .reveal {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .reveal-left {
+      opacity: 0;
+      transform: translateX(-40px);
+      transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .reveal-right {
+      opacity: 0;
+      transform: translateX(40px);
+      transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .reveal-scale {
+      opacity: 0;
+      transform: scale(0.92);
+      transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .reveal-visible {
+      opacity: 1;
+      transform: translate(0) scale(1);
+    }
+
+    /* Delay utilities */
+    .delay-100 { transition-delay: 0.1s; }
+    .delay-200 { transition-delay: 0.2s; }
+    .delay-300 { transition-delay: 0.3s; }
+    .delay-400 { transition-delay: 0.4s; }
+
+    /* ==========================================
+       NAVIGATION BAR
+       ========================================== */
+    .header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      transition: var(--transition-normal);
+      border-bottom: 1px solid transparent;
+    }
+
+    .header-transparent {
+      background-color: transparent;
+      backdrop-filter: none;
+      -webkit-backdrop-filter: none;
+      padding: 1.5rem 0;
+    }
+
+    .header-scrolled {
+      background-color: var(--glass-bg);
+      border-bottom: 1px solid var(--glass-border);
+      backdrop-filter: var(--glass-blur);
+      -webkit-backdrop-filter: var(--glass-blur);
+      padding: 1rem 0;
+      box-shadow: var(--shadow-md);
+    }
+
+    .navbar-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: var(--font-heading);
+      font-size: 24px;
+      font-weight: 800;
+      color: var(--white);
+      letter-spacing: -0.5px;
+    }
+
+    .header-scrolled .logo-container {
+      color: var(--primary);
+    }
+
+    .logo-icon {
+      color: var(--accent);
+      animation: pulse 2s infinite;
+    }
+
+    .nav-menu {
+      display: flex;
+      align-items: center;
+      gap: 2.25rem;
+    }
+
+    .nav-link {
+      font-weight: 500;
+      font-size: 15px;
+      color: rgba(255, 255, 255, 0.85);
+      position: relative;
+      padding: 0.25rem 0;
+    }
+
+    .header-scrolled .nav-link {
+      color: var(--text-main);
+    }
+
+    .nav-link:hover {
+      color: var(--white);
+    }
+
+    .header-scrolled .nav-link:hover {
+      color: var(--secondary);
+    }
+
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background-color: var(--accent);
+      transition: var(--transition-fast);
+    }
+
+    .header-scrolled .nav-link::after {
+      background-color: var(--secondary);
+    }
+
+    .nav-link:hover::after,
+    .nav-link.active::after {
+      width: 100%;
+    }
+
+    .nav-link.active {
+      color: var(--white);
+    }
+
+    .header-scrolled .nav-link.active {
+      color: var(--secondary);
+      font-weight: 600;
+    }
+
+    .nav-cta {
+      display: flex;
+      align-items: center;
+    }
+
+    .navbar-burger {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: var(--white);
+      padding: 0.5rem;
+    }
+
+    .header-scrolled .navbar-burger {
+      color: var(--primary);
+    }
+
+    /* Mobile Sidebar Menu Drawer */
+    .mobile-drawer {
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 320px;
+      height: 100vh;
+      background-color: var(--primary);
+      z-index: 2000;
+      box-shadow: var(--shadow-xl);
+      padding: 2.5rem 2rem;
+      display: flex;
+      flex-direction: column;
+      transform: translateX(100%);
+      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .mobile-drawer.open {
+      transform: translateX(0);
+    }
+
+    .drawer-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      background-color: rgba(15, 23, 42, 0.6);
+      backdrop-filter: blur(4px);
+      z-index: 1999;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+    }
+
+    .drawer-overlay.open {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .drawer-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 3.5rem;
+    }
+
+    .drawer-close {
+      background: none;
+      border: none;
+      color: var(--white);
+      cursor: pointer;
+      padding: 0.5rem;
+    }
+
+    .drawer-menu {
+      display: flex;
+      flex-direction: column;
+      gap: 1.75rem;
+      margin-bottom: auto;
+    }
+
+    .drawer-link {
+      color: rgba(255, 255, 255, 0.8);
+      font-size: 18px;
+      font-family: var(--font-heading);
+      font-weight: 500;
+    }
+
+    .drawer-link:hover, .drawer-link.active {
+      color: var(--accent);
+      padding-left: 0.5rem;
+    }
+
+    .drawer-footer {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      padding-top: 2rem;
+    }
+
+    /* ==========================================
+       HERO SECTION REDESIGN (Split Layout & Glassmorphism)
+       ========================================== */
+    .hero-wrapper {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      overflow: hidden;
+      z-index: 1;
+      background: #0f172a;
+    }
+
+    .hero-right {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    .hero-slide {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      transition: opacity 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+      display: flex;
+      align-items: center;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .hero-slide.active {
+      opacity: 1;
+      z-index: 2;
+      pointer-events: auto;
+    }
+
+    .hero-slide img.slide-bg {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 0;
+      transform: scale(1.02);
+      transition: transform 8s ease-out;
+      filter: brightness(0.55);
+    }
+
+    .hero-slide.active img.slide-bg {
+      transform: scale(1.08);
+    }
+
+    .slide-overlay {
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      /* Cinematographic dark gradient overlay */
+      background: linear-gradient(90deg, rgba(15, 23, 42, 0.92) 0%, rgba(15, 23, 42, 0.75) 45%, rgba(15, 23, 42, 0.4) 100%);
+    }
+
+    .hero-content-wrap {
+      position: relative;
+      z-index: 2;
+      padding: 0 4rem;
+      width: 100%;
+      max-width: 1280px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-sizing: border-box;
+      gap: 3rem;
+      height: 100%;
+    }
+
+    .hero-text-section {
+      position: relative;
+      max-width: 55%;
+      flex-shrink: 0;
+      text-align: left;
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.3s, transform 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.3s;
+    }
+
+    .hero-slide.active .hero-text-section {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .slide-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 14px;
+      border-radius: 30px;
+      font-size: 11px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 20px;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: blur(4px);
+      color: #fff;
+    }
+
+    .slide-h1 {
+      font-size: clamp(2.2rem, 4.2vw, 3.6rem);
+      font-weight: 800;
+      color: #fff;
+      line-height: 1.15;
+      margin-bottom: 20px;
+      text-shadow: 0 2px 12px rgba(0,0,0,0.4);
+      font-family: var(--font-heading);
+      letter-spacing: -1px;
+    }
+
+    .slide-h1 span {
+      background: linear-gradient(135deg, var(--accent) 0%, #fff 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .slide-p {
+      font-size: clamp(15px, 1.6vw, 19px);
+      color: rgba(248, 250, 252, 0.9);
+      line-height: 1.6;
+      margin-bottom: 30px;
+      max-width: 620px;
+      text-shadow: 0 1px 4px rgba(0,0,0,0.2);
+    }
+
+    .slide-cta-wrap {
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+    }
+
+    .tai-cards {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      width: 100%;
+      max-width: 360px;
+      flex-shrink: 0;
+      opacity: 0;
+      transform: translateX(40px);
+      transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.5s, transform 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.5s;
+    }
+
+    .hero-slide.active .tai-cards {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    .tai-card {
+      background-color: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 18px;
+      padding: 18px 22px;
+      position: relative;
+      backdrop-filter: blur(16px) saturate(140%);
+      -webkit-backdrop-filter: blur(16px) saturate(140%);
+      cursor: pointer;
+      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s, background-color 0.3s, box-shadow 0.3s;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+    }
+
+    .tai-card:hover {
+      transform: translateY(-4px) scale(1.02);
+      border-color: rgba(245, 158, 11, 0.45);
+      background-color: rgba(255, 255, 255, 0.15);
+      box-shadow: 0 12px 30px rgba(245, 158, 11, 0.15);
+    }
+
+    .tai-icon-container {
+      background-color: rgba(255, 255, 255, 0.12);
+      width: 38px;
+      height: 38px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 10px;
+      font-size: 18px;
+      color: var(--accent);
+      transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .tai-card:hover .tai-icon-container {
+      transform: scale(1.1) rotate(6deg);
+      background-color: var(--accent);
+      color: var(--primary);
+    }
+
+    .tai-card-title {
+      color: #fff;
+      font-size: 14px;
+      font-weight: 700;
+      margin-bottom: 4px;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      letter-spacing: 0.2px;
+    }
+
+    .tai-card-desc {
+      color: rgba(255, 255, 255, 0.82);
+      font-size: 12px;
+      line-height: 1.45;
+      font-weight: 400;
+      margin: 0;
+    }
+
+    .tai-mini-sparkle {
+      color: var(--accent);
+      font-size: 10px;
+    }
+
+    .tai-corner-sparkle {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      font-size: 11px;
+      animation: floatSparkle 2s infinite alternate ease-in-out;
+    }
+
+    /* Dots & Arrow Navigation */
+    .slider-dots {
+      position: absolute;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 10;
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      background: rgba(15, 23, 42, 0.4);
+      padding: 8px 16px;
+      border-radius: 30px;
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .sdot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.35);
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      border: none;
+      cursor: pointer;
+    }
+
+    .sdot.active {
+      background: var(--accent);
+      width: 22px;
+      border-radius: 4px;
+    }
+
+    .snav {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      color: #fff;
+      font-size: 22px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      z-index: 10;
+      transition: all 0.25s ease;
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+    }
+
+    .snav:hover {
+      background: rgba(255, 255, 255, 0.18);
+      border-color: rgba(255, 255, 255, 0.25);
+      transform: translateY(-50%) scale(1.05);
+    }
+
+    .snav.prev { left: 24px; }
+    .snav.next { right: 24px; }
+
+    /* Animations */
+    @keyframes floatSparkle {
+      0% { transform: translateY(0) scale(0.9); opacity: 0.7; }
+      100% { transform: translateY(-4px) scale(1.1); opacity: 1; }
+    }
+
+
+    /* ==========================================
+       SERVICES SECTION
+       ========================================== */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2.5rem;
+    }
+
+    .service-card {
+      background-color: var(--white);
+      border-radius: 20px;
+      padding: 3rem 2.25rem;
+      box-shadow: var(--shadow-md);
+      transition: var(--transition-normal);
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
+      border: 1.5px solid var(--border-light);
+    }
+
+    /* Gradient Border Outline Effect on hover */
+    .service-card::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 20px;
+      padding: 2px; /* width of border */
+      background: linear-gradient(135deg, var(--secondary), var(--accent));
+      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+      opacity: 0;
+      transition: var(--transition-normal);
+      pointer-events: none;
+      z-index: 2;
+    }
+
+    .service-card:hover::after {
+      opacity: 1;
+    }
+
+    .service-card:hover {
+      transform: translateY(-10px);
+      box-shadow: var(--shadow-xl), 0 12px 30px rgba(37, 99, 235, 0.08);
+    }
+
+    .service-icon-wrapper {
+      width: 64px;
+      height: 64px;
+      border-radius: 16px;
+      background: linear-gradient(135deg, rgba(37, 99, 235, 0.1) 0%, rgba(245, 158, 11, 0.1) 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 2rem;
+      color: var(--secondary);
+      transition: var(--transition-normal);
+    }
+
+    .service-card:hover .service-icon-wrapper {
+      background: linear-gradient(135deg, var(--secondary) 0%, var(--accent) 100%);
+      color: var(--white);
+      transform: scale(1.1) rotate(5deg);
+    }
+
+    .service-card h3 {
+      font-size: 22px;
+      margin-bottom: 1rem;
+      font-weight: 700;
+    }
+
+    .service-card p {
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    /* ==========================================
+       PACKAGES SECTION
+       ========================================== */
+    .packages {
+      background-color: rgba(241, 245, 249, 0.4);
+    }
+
+    .packages-filter {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-bottom: 3.5rem;
+    }
+
+    .btn-filter {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.65rem 1.75rem;
+      font-weight: 600;
+      border-radius: 50px;
+      cursor: pointer;
+      font-size: 14.5px;
+      background-color: var(--white);
+      color: var(--text-main);
+      border: 1.5px solid var(--border-light);
+      transition: var(--transition-fast);
+      box-shadow: var(--shadow-sm);
+    }
+    
+    .btn-filter:hover, .btn-filter.active {
+      background-color: var(--secondary);
+      color: var(--white);
+      border-color: var(--secondary);
+      box-shadow: 0 6px 16px rgba(37, 99, 235, 0.18);
+      transform: translateY(-1px);
+    }
+
+    .packages-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2.5rem;
+    }
+
+    .package-card {
+      position: relative;
+      background-color: var(--white);
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: var(--shadow-md);
+      transition: var(--transition-normal);
+      border: 1.5px solid var(--border-light);
+      display: flex;
+      flex-direction: column;
+      z-index: 1;
+    }
+
+    .package-card::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 20px;
+      padding: 2px; /* width of border */
+      background: linear-gradient(135deg, var(--secondary), var(--accent));
+      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+      opacity: 0;
+      transition: var(--transition-normal);
+      pointer-events: none;
+      z-index: 2;
+    }
+
+    .package-card:hover::after {
+      opacity: 1;
+    }
+
+    .package-card:hover {
+      transform: translateY(-10px);
+      box-shadow: var(--shadow-xl), 0 20px 40px rgba(37, 99, 235, 0.08);
+    }
+
+    .package-img-container {
+      position: relative;
+      height: 250px;
+      overflow: hidden;
+    }
+
+    .package-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: var(--transition-slow);
+    }
+
+    .package-card:hover .package-img {
+      transform: scale(1.1);
+    }
+
+    .package-badge {
+      position: absolute;
+      top: 1.25rem;
+      left: 1.25rem;
+      background-color: var(--primary);
+      color: var(--white);
+      padding: 0.4rem 1rem;
+      border-radius: 50px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      box-shadow: var(--shadow-sm);
+      z-index: 10;
+      text-transform: uppercase;
+    }
+
+    .package-badge-accent {
+      background-color: var(--accent);
+      color: var(--primary);
+    }
+
+    .package-duration {
+      position: absolute;
+      bottom: 1.25rem;
+      right: 1.25rem;
+      background-color: rgba(15, 23, 42, 0.75);
+      color: var(--white);
+      backdrop-filter: blur(4px);
+      padding: 0.35rem 0.85rem;
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 0.35rem;
+      z-index: 10;
+    }
+
+    .package-body {
+      padding: 2.25rem;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+
+    .package-header {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      margin-bottom: 1.25rem;
+      gap: 1rem;
+    }
+
+    .package-title {
+      font-size: 22px;
+      font-weight: 700;
+      line-height: 1.3;
+    }
+
+    .package-price-box {
+      text-align: right;
+    }
+
+    .package-price-label {
+      font-size: 11px;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      letter-spacing: 0.5px;
+      font-weight: 600;
+    }
+
+    .package-price {
+      font-size: 22px;
+      font-weight: 800;
+      color: var(--secondary);
+      line-height: 1;
+    }
+
+    .package-features {
+      margin-bottom: 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      margin-top: 0.5rem;
+    }
+
+    .package-feature-item {
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+      font-size: 14.5px;
+      color: var(--text-main);
+    }
+
+    .package-feature-icon {
+      color: var(--secondary);
+      flex-shrink: 0;
+    }
+
+    .package-footer {
+      margin-top: auto;
+      border-top: 1px solid var(--border-light);
+      padding-top: 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .package-rating {
+      display: flex;
+      align-items: center;
+      gap: 0.25rem;
+    }
+
+    .star-icon {
+      fill: var(--accent);
+      color: var(--accent);
+    }
+
+    .rating-text {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text-main);
+      margin-left: 0.25rem;
+    }
+
+    .package-btn {
+      width: 100%;
+    }
+
+    /* ==========================================
+       TRUST SECTION (STATISTICS)
+       ========================================== */
+    .trust {
+      background: linear-gradient(135deg, var(--primary) 0%, #1E293B 100%);
+      color: var(--white);
+      padding: 5rem 0;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .trust::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 100%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(37, 99, 235, 0.15) 0%, transparent 60%);
+      pointer-events: none;
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 3rem;
+      position: relative;
+      z-index: 5;
+    }
+
+    .stat-card {
+      text-align: center;
+    }
+
+    .stat-number {
+      font-size: 56px;
+      font-family: var(--font-heading);
+      font-weight: 800;
+      color: var(--accent);
+      line-height: 1.1;
+      margin-bottom: 0.5rem;
+    }
+
+    .stat-label {
+      font-size: 16px;
+      color: rgba(248, 250, 252, 0.8);
+      font-weight: 500;
+    }
+
+    /* ==========================================
+       WHY CHOOSE US SECTION
+       ========================================== */
+    .why-choose-us-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+    }
+
+    .why-card {
+      background-color: var(--white);
+      border: 1.5px solid var(--border-light);
+      border-radius: 20px;
+      padding: 2.5rem;
+      transition: var(--transition-normal);
+      position: relative;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .why-card:hover {
+      background-color: var(--white);
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-lg);
+      border-color: rgba(37, 99, 235, 0.3);
+    }
+
+    /* Glassmorphism subtle variant style */
+    .why-card-glass {
+      background: rgba(255, 255, 255, 0.6);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.5);
+    }
+
+    .why-card-glass:hover {
+      background: rgba(255, 255, 255, 0.85);
+      border-color: rgba(255, 255, 255, 0.8);
+    }
+
+    .why-icon-box {
+      width: 52px;
+      height: 52px;
+      border-radius: 12px;
+      background-color: rgba(37, 99, 235, 0.08);
+      color: var(--secondary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.5rem;
+    }
+
+    .why-card:hover .why-icon-box {
+      background-color: var(--secondary);
+      color: var(--white);
+      transform: scale(1.05);
+      transition: var(--transition-fast);
+    }
+
+    .why-card h3 {
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 0.75rem;
+    }
+
+    .why-card p {
+      color: var(--text-muted);
+      font-size: 14.5px;
+      line-height: 1.5;
+    }
+
+    /* ==========================================
+       BOOKING FORM SECTION
+       ========================================== */
+    .booking-section {
+      background-color: rgba(241, 245, 249, 0.4);
+    }
+
+    .booking-container {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      background-color: var(--white);
+      border-radius: 30px;
+      overflow: hidden;
+      box-shadow: var(--shadow-xl);
+      border: 1px solid var(--border-light);
+    }
+
+    .booking-form-side {
+      padding: 4.5rem;
+    }
+
+    .booking-form-side h3 {
+      font-size: 32px;
+      margin-bottom: 0.5rem;
+    }
+
+    .booking-form-side p {
+      color: var(--text-muted);
+      margin-bottom: 3rem;
+    }
+
+    /* Floating Labels Form */
+    .form-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem 1.5rem;
+    }
+
+    .form-full-width {
+      grid-column: span 2;
+    }
+
+    .form-group {
+      position: relative;
+    }
+
+    .form-input {
+      width: 100%;
+      padding: 1.1rem 1rem 1.1rem 1rem;
+      border: 1.5px solid var(--border-light);
+      border-radius: 12px;
+      font-size: 15px;
+      color: var(--text-main);
+      background-color: var(--bg-main);
+      transition: var(--transition-fast);
+      appearance: none;
+    }
+
+    select.form-input {
+      cursor: pointer;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%2364748b' stroke-width='2'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M19.5 8.25l-7.5 7.5-7.5-7.5'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 1rem center;
+      background-size: 1.25rem;
+      padding-right: 2.5rem;
+    }
+
+    .form-input:focus {
+      border-color: var(--secondary);
+      background-color: var(--white);
+      box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.1);
+    }
+
+    .form-label {
+      position: absolute;
+      left: 1rem;
+      top: 1.15rem;
+      color: var(--text-muted);
+      pointer-events: none;
+      transition: var(--transition-fast);
+      font-size: 15px;
+      background-color: transparent;
+      padding: 0 0.25rem;
+    }
+
+    /* Floating effect */
+    .form-input:focus ~ .form-label,
+    .form-input:not(:placeholder-shown) ~ .form-label {
+      top: -0.65rem;
+      left: 0.75rem;
+      font-size: 12px;
+      color: var(--secondary);
+      font-weight: 600;
+      background-color: var(--white);
+    }
+
+    /* Standard labels fallback for date and select */
+    .form-group-fixed .form-label {
+      top: -0.65rem;
+      left: 0.75rem;
+      font-size: 12px;
+      color: var(--text-muted);
+      font-weight: 600;
+      background-color: var(--white);
+    }
+    
+    .form-group-fixed .form-input:focus ~ .form-label {
+      color: var(--secondary);
+    }
+
+    .booking-image-side {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .booking-side-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .booking-image-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to top, rgba(15, 23, 42, 0.95), rgba(15, 23, 42, 0.2));
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 4rem;
+      color: var(--white);
+    }
+
+    .booking-image-overlay h4 {
+      color: var(--white);
+      font-size: 28px;
+      margin-bottom: 0.75rem;
+    }
+
+    .booking-image-overlay p {
+      color: rgba(255, 255, 255, 0.85);
+      font-size: 16px;
+      margin-bottom: 2rem;
+      line-height: 1.5;
+    }
+
+    .booking-image-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background-color: var(--accent);
+      color: var(--primary);
+      align-self: flex-start;
+      padding: 0.5rem 1.25rem;
+      border-radius: 50px;
+      font-weight: 700;
+      font-size: 14px;
+      margin-bottom: 1.5rem;
+    }
+
+    /* Success Toast Modal */
+    .success-modal {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(15, 23, 42, 0.5);
+      backdrop-filter: blur(8px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 3000;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity var(--transition-normal);
+    }
+
+    .success-modal.active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .success-card {
+      background-color: var(--white);
+      border-radius: 24px;
+      padding: 3.5rem;
+      max-width: 500px;
+      text-align: center;
+      box-shadow: var(--shadow-xl);
+      transform: scale(0.9);
+      transition: transform var(--transition-normal);
+    }
+
+    .success-modal.active .success-card {
+      transform: scale(1);
+    }
+
+    .success-icon-container {
+      width: 80px;
+      height: 80px;
+      background-color: rgba(37, 99, 235, 0.1);
+      color: var(--secondary);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 2rem auto;
+    }
+
+    .success-card h3 {
+      font-size: 26px;
+      margin-bottom: 1rem;
+    }
+
+    .success-card p {
+      color: var(--text-muted);
+      margin-bottom: 2rem;
+      line-height: 1.5;
+    }
+
+    /* ==========================================
+       MASONRY GALLERY SECTION
+       ========================================== */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-auto-rows: 260px;
+      gap: 1.5rem;
+    }
+
+    .gallery-item {
+      position: relative;
+      border-radius: 20px;
+      overflow: hidden;
+      cursor: pointer;
+      box-shadow: var(--shadow-sm);
+    }
+
+    /* Make items span different rows for a masonry/mosaic feel */
+    .gallery-item.row-span-2 {
+      grid-row: span 2;
+    }
+    
+    .gallery-item.col-span-2 {
+      grid-column: span 2;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: var(--transition-slow);
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.08);
+      filter: brightness(0.9);
+    }
+
+    .gallery-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to top, rgba(15, 23, 42, 0.8) 0%, rgba(15, 23, 42, 0.2) 100%);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 2rem;
+      opacity: 0;
+      transition: var(--transition-normal);
+      color: var(--white);
+    }
+
+    .gallery-item:hover .gallery-overlay {
+      opacity: 1;
+    }
+
+    .gallery-overlay-icon {
+      width: 44px;
+      height: 44px;
+      background-color: var(--accent);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--primary);
+      margin-bottom: 1rem;
+      transform: translateY(20px);
+      transition: transform var(--transition-normal);
+    }
+
+    .gallery-item:hover .gallery-overlay-icon {
+      transform: translateY(0);
+    }
+
+    .gallery-overlay h4 {
+      color: var(--white);
+      font-size: 18px;
+      font-weight: 700;
+      transform: translateY(20px);
+      transition: transform var(--transition-normal) 0.05s;
+    }
+
+    .gallery-item:hover .gallery-overlay h4 {
+      transform: translateY(0);
+    }
+
+    .gallery-overlay p {
+      color: rgba(255, 255, 255, 0.75);
+      font-size: 13px;
+      transform: translateY(20px);
+      transition: transform var(--transition-normal) 0.1s;
+    }
+
+    .gallery-item:hover .gallery-overlay p {
+      transform: translateY(0);
+    }
+
+    /* Lightbox Modal */
+    .lightbox {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(15, 23, 42, 0.95);
+      backdrop-filter: blur(12px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 4000;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity var(--transition-normal);
+    }
+
+    .lightbox.active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .lightbox-content-wrapper {
+      position: relative;
+      max-width: 85%;
+      max-height: 80%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .lightbox-img {
+      max-width: 100%;
+      max-height: 80vh;
+      object-fit: contain;
+      border-radius: 12px;
+      box-shadow: var(--shadow-xl);
+      border: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .lightbox-caption {
+      color: var(--white);
+      margin-top: 1.5rem;
+      font-size: 18px;
+      font-weight: 600;
+      text-align: center;
+      font-family: var(--font-heading);
+    }
+
+    .lightbox-subcaption {
+      color: rgba(255,255,255,0.6);
+      font-size: 14px;
+      margin-top: 0.25rem;
+    }
+
+    .lightbox-close {
+      position: absolute;
+      top: -3.5rem;
+      right: 0;
+      background: none;
+      border: none;
+      color: var(--white);
+      cursor: pointer;
+      padding: 0.5rem;
+      transition: var(--transition-fast);
+    }
+
+    .lightbox-close:hover {
+      color: var(--accent);
+      transform: scale(1.1);
+    }
+
+    .lightbox-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      color: var(--white);
+      cursor: pointer;
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      backdrop-filter: blur(4px);
+      transition: var(--transition-normal);
+      z-index: 10;
+    }
+
+    .lightbox-btn:hover {
+      background-color: var(--white);
+      color: var(--primary);
+      transform: translateY(-50%) scale(1.05);
+    }
+
+    .lightbox-prev {
+      left: -6.5rem;
+    }
+
+    .lightbox-next {
+      right: -6.5rem;
+    }
+
+    /* ==========================================
+       TESTIMONIALS SECTION
+       ========================================== */
+    .testimonials {
+      background-color: var(--white);
+      position: relative;
+    }
+
+    .carousel-container {
+      max-width: 900px;
+      margin: 0 auto;
+      position: relative;
+      overflow: hidden;
+      padding: 1.5rem 0;
+    }
+
+    .carousel-track {
+      display: flex;
+      transition: transform var(--transition-slow);
+    }
+
+    .testimonial-slide {
+      min-width: 100%;
+      padding: 0 1rem;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .testimonial-avatar {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 2rem;
+      border: 4px solid var(--white);
+      box-shadow: 0 0 0 3px var(--secondary);
+    }
+
+    .testimonial-stars {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.25rem;
+      margin-bottom: 2rem;
+    }
+
+    .testimonial-text {
+      font-size: 20px;
+      color: var(--text-main);
+      line-height: 1.7;
+      font-style: italic;
+      font-weight: 500;
+      margin-bottom: 2.5rem;
+      position: relative;
+      max-width: 780px;
+    }
+
+    .testimonial-text::before {
+      content: '“';
+      position: absolute;
+      top: -2.5rem;
+      left: -1rem;
+      font-size: 80px;
+      color: rgba(37, 99, 235, 0.12);
+      font-family: Georgia, serif;
+    }
+    
+    .testimonial-text::after {
+      content: '”';
+      position: absolute;
+      bottom: -4.5rem;
+      right: -1rem;
+      font-size: 80px;
+      color: rgba(37, 99, 235, 0.12);
+      font-family: Georgia, serif;
+    }
+
+    .testimonial-info h4 {
+      font-size: 19px;
+      font-weight: 700;
+      margin-bottom: 0.25rem;
+    }
+
+    .testimonial-info p {
+      color: var(--text-muted);
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-weight: 600;
+    }
+
+    .carousel-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: var(--white);
+      border: 1.5px solid var(--border-light);
+      color: var(--text-main);
+      cursor: pointer;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition-fast);
+      z-index: 10;
+    }
+
+    .carousel-btn:hover {
+      background-color: var(--secondary);
+      border-color: var(--secondary);
+      color: var(--white);
+      box-shadow: 0 5px 15px rgba(37, 99, 235, 0.2);
+    }
+
+    .carousel-prev {
+      left: 0;
+    }
+
+    .carousel-next {
+      right: 0;
+    }
+
+    .carousel-indicators {
+      display: flex;
+      justify-content: center;
+      gap: 0.65rem;
+      margin-top: 3.5rem;
+    }
+
+    .indicator {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: rgba(15, 23, 42, 0.15);
+      cursor: pointer;
+      transition: var(--transition-fast);
+    }
+
+    .indicator.active {
+      background-color: var(--secondary);
+      transform: scale(1.3);
+      width: 20px;
+      border-radius: 5px;
+    }
+
+    /* ==========================================
+       FOOTER SECTION
+       ========================================== */
+    .footer {
+      background: linear-gradient(135deg, var(--primary) 0%, #090D16 100%);
+      color: rgba(255, 255, 255, 0.7);
+      padding: 6rem 0 2rem 0;
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.3fr 0.8fr 0.9fr 1fr;
+      gap: 4rem;
+      margin-bottom: 5rem;
+    }
+
+    .footer-brand h3 {
+      color: var(--white);
+      font-size: 26px;
+      font-weight: 800;
+      margin-bottom: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .footer-brand p {
+      font-size: 15px;
+      line-height: 1.7;
+      margin-bottom: 2.25rem;
+    }
+
+    .footer-socials {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .social-icon {
+      width: 44px;
+      height: 44px;
+      background-color: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--white);
+      transition: var(--transition-normal);
+    }
+
+    .social-icon:hover {
+      background-color: var(--secondary);
+      border-color: var(--secondary);
+      transform: translateY(-4px);
+    }
+
+    .footer-heading {
+      color: var(--white);
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 2rem;
+      position: relative;
+    }
+
+    .footer-heading::after {
+      content: '';
+      display: block;
+      width: 30px;
+      height: 2px;
+      background: var(--accent);
+      margin-top: 0.5rem;
+      border-radius: 1px;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .footer-link {
+      font-size: 15px;
+      color: rgba(255, 255, 255, 0.7);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .footer-link:hover {
+      color: var(--accent);
+      padding-left: 0.35rem;
+    }
+
+    .footer-contact-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      margin-bottom: 1.25rem;
+      font-size: 15px;
+    }
+
+    .footer-contact-icon {
+      color: var(--accent);
+      flex-shrink: 0;
+      margin-top: 0.2rem;
+    }
+
+    .footer-contact-item a:hover {
+      color: var(--white);
+    }
+
+    .footer-whatsapp-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background-color: #25D366;
+      color: var(--white);
+      padding: 0.75rem 1.25rem;
+      border-radius: 10px;
+      font-weight: 600;
+      font-size: 15px;
+      margin-top: 0.5rem;
+    }
+
+    .footer-whatsapp-btn:hover {
+      background-color: #128C7E;
+      transform: translateY(-2px);
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      padding-top: 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 14px;
+    }
+
+    .footer-bottom-links {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    .footer-bottom-links a:hover {
+      color: var(--white);
+    }
+
+    /* Floating WhatsApp Widget (Bottom-Right) */
+    .whatsapp-widget {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      width: 60px;
+      height: 60px;
+      background-color: #25D366;
+      color: var(--white);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 20px rgba(37, 211, 102, 0.35);
+      z-index: 999;
+      transition: var(--transition-normal);
+      cursor: pointer;
+      animation: pulseWidget 2.5s infinite;
+    }
+
+    .whatsapp-widget:hover {
+      transform: scale(1.1) rotate(5deg);
+      background-color: #20BA5A;
+      box-shadow: 0 6px 24px rgba(37, 211, 102, 0.5);
+    }
+
+    .whatsapp-tooltip {
+      position: absolute;
+      right: 4.75rem;
+      background-color: var(--primary);
+      color: var(--white);
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 600;
+      white-space: nowrap;
+      pointer-events: none;
+      opacity: 0;
+      transform: translateX(10px);
+      transition: all var(--transition-fast);
+      box-shadow: var(--shadow-md);
+    }
+
+    .whatsapp-widget:hover .whatsapp-tooltip {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    @keyframes pulseWidget {
+      0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.6); }
+      70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+    }
+
+    /* ==========================================
+       RESPONSIVE MEDIA QUERIES
+       ========================================== */
+    @media (max-width: 1200px) {
+      .hero-content-wrap { padding: 0 2rem; }
+      .booking-form-side { padding: 3rem; }
+      .lightbox-prev { left: -3.5rem; }
+      .lightbox-next { right: -3.5rem; }
+    }
+
+    @media (max-width: 1024px) {
+      .section { padding: 5rem 0; }
+      .section-header h2 { font-size: 34px; }
+      
+      .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+      }
+      
+      .packages-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+      }
+
+      .why-choose-us-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+      }
+
+      .booking-container {
+        grid-template-columns: 1fr;
+      }
+      
+      .booking-image-side {
+        height: 350px;
+      }
+
+      .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2.5rem;
+      }
+
+      .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 3rem;
+      }
+    }
+
+    @media (max-width: 992px) {
+      .hero-content-wrap {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 6rem 2rem 2rem 2rem;
+        gap: 2rem;
+        text-align: center;
+      }
+      .hero-text-section {
+        max-width: 100%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .slide-badge {
+        margin-bottom: 12px;
+      }
+      .slide-h1 {
+        font-size: clamp(1.8rem, 5vw, 2.8rem);
+        margin-bottom: 12px;
+      }
+      .slide-p {
+        margin-bottom: 20px;
+      }
+      .slide-cta-wrap {
+        justify-content: center;
+      }
+      .tai-cards {
+        flex-direction: row;
+        max-width: 100%;
+        gap: 15px;
+        justify-content: center;
+      }
+      .tai-card {
+        padding: 14px 18px;
+        flex: 1;
+        max-width: 320px;
+        text-align: left;
+      }
+      .snav {
+        display: none;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .nav-menu, .nav-cta {
+        display: none;
+      }
+
+      .navbar-burger {
+        display: block;
+      }
+
+      .section-header {
+        margin-bottom: 3rem;
+      }
+
+      .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: 200px;
+      }
+      
+      .gallery-item.col-span-2 {
+        grid-column: span 1;
+      }
+
+      .lightbox-prev, .lightbox-next {
+        display: none !important;
+      }
+
+      .lightbox-content-wrapper {
+        max-width: 90%;
+      }
+
+      .lightbox-close {
+        top: -3rem;
+        right: 0;
+      }
+
+      .carousel-btn {
+        display: none;
+      }
+
+      .form-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .form-full-width {
+        grid-column: span 1;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .hero-content-wrap {
+        padding-top: 5rem;
+        gap: 1.5rem;
+      }
+      .slide-cta-wrap {
+        flex-direction: column;
+        width: 100%;
+        max-width: 280px;
+        gap: 0.75rem;
+      }
+      .slide-cta-wrap .btn {
+        width: 100%;
+      }
+      .tai-cards {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+        align-items: center;
+      }
+      .tai-card {
+        padding: 10px 14px;
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+      }
+      .tai-icon-container {
+        width: 28px;
+        height: 28px;
+        font-size: 14px;
+        margin-bottom: 6px;
+      }
+      .tai-card-title {
+        font-size: 12px;
+        margin-bottom: 2px;
+      }
+      .tai-card-desc {
+        font-size: 10.5px;
+      }
+      .tai-corner-sparkle {
+        display: none;
+      }
+      .slider-dots {
+        bottom: 20px;
+      }
+
+      .services-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .packages-grid {
+        grid-template-columns: 1fr;
+        max-width: 420px;
+        margin: 0 auto;
+      }
+
+      .why-choose-us-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .gallery-grid {
+        grid-template-columns: 1fr;
+        grid-auto-rows: 240px;
+      }
+
+      .stats-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+        gap: 1.5rem;
+        text-align: center;
+      }
+
+      .footer-bottom-links {
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      .booking-form-side {
+        padding: 2rem 1.5rem;
+      }
+
+      .booking-form-side h3 {
+        font-size: 26px;
+      }
+      
+      .booking-image-side {
+        height: 280px;
+      }
+      
+      .booking-image-overlay {
+        padding: 2rem;
+      }
+
+      .whatsapp-widget {
+        bottom: 1.5rem;
+        right: 1.5rem;
+        width: 50px;
+        height: 50px;
+      }
+      
+      .whatsapp-tooltip {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ==========================================
+       NAVIGATION BAR
+       ========================================== -->
+  <header class="header header-transparent" id="header">
+    <div class="container navbar-container">
+      <!-- Brand Logo -->
+      <a href="#" class="logo-container">
+        <i data-lucide="compass" class="logo-icon"></i>
+        <span>VAMSI TRAVELS</span>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="nav-menu">
+        <a href="#" class="nav-link active">Home</a>
+        <a href="#services" class="nav-link">Services</a>
+        <a href="#packages" class="nav-link">Packages</a>
+        <a href="#why-choose-us" class="nav-link">Why Choose Us</a>
+        <a href="#gallery" class="nav-link">Gallery</a>
+        <a href="#testimonials" class="nav-link">Testimonials</a>
+      </nav>
+
+      <!-- CTA Button -->
+      <div class="nav-cta">
+        <a href="#booking" class="btn btn-accent" style="padding: 0.6rem 1.5rem; font-size: 14.5px;">Book Package</a>
+      </div>
+
+      <!-- Hamburger Icon for Mobile -->
+      <button class="navbar-burger" id="burger-menu-btn" aria-label="Toggle navigation menu">
+        <i data-lucide="menu" size="28"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Drawer -->
+  <div class="drawer-overlay" id="drawer-overlay"></div>
+  <div class="mobile-drawer" id="mobile-drawer">
+    <div class="drawer-header">
+      <a href="#" class="logo-container">
+        <i data-lucide="compass" class="logo-icon"></i>
+        <span>VAMSI</span>
+      </a>
+      <button class="drawer-close" id="drawer-close-btn">
+        <i data-lucide="x" size="28"></i>
+      </button>
+    </div>
+    <div class="drawer-menu">
+      <a href="#" class="drawer-link active" onclick="closeDrawer()">Home</a>
+      <a href="#services" class="drawer-link" onclick="closeDrawer()">Services</a>
+      <a href="#packages" class="drawer-link" onclick="closeDrawer()">Packages</a>
+      <a href="#why-choose-us" class="drawer-link" onclick="closeDrawer()">Why Choose Us</a>
+      <a href="#gallery" class="drawer-link" onclick="closeDrawer()">Gallery</a>
+      <a href="#testimonials" class="drawer-link" onclick="closeDrawer()">Testimonials</a>
+    </div>
+    <div class="drawer-footer">
+      <a href="tel:+919876543210" class="btn btn-outline" style="border-color: rgba(255,255,255,0.2);">
+        <i data-lucide="phone" size="18"></i> Call Us
+      </a>
+      <a href="#booking" class="btn btn-accent" onclick="closeDrawer()">
+        <i data-lucide="calendar" size="18"></i> Book Online
+      </a>
+    </div>
+  </div>
+
+  <!-- ==========================================
+       HERO SECTION
+       ========================================== -->
+  <section class="hero-wrapper fade-up" id="home">
+    <div class="hero-right" id="hero-slider">
+      
+      <!-- Slide 0: Tirupati Pilgrimage -->
+      <div class="hero-slide active" id="slide-0">
+        <div class="slide-overlay"></div>
+        <img class="slide-bg" src="images/hero1.jpg" alt="Tirupati Temple">
+        <div class="hero-content-wrap">
+          <div class="hero-text-section">
+            <span class="slide-badge">🕉️ Tirupati Pilgrimage</span>
+            <h1 class="slide-h1">Your Trusted <span>Tirupati Travel</span> Partner</h1>
+            <p class="slide-p">Book Cab Services, Tirupati Darshan Packages & Temple Tours with Comfort and Reliability. Experiencing spirituality has never been so smooth.</p>
+            <div class="slide-cta-wrap">
+              <a href="#booking" class="btn btn-primary">
+                <i data-lucide="arrow-right-circle" size="20"></i> Book Now
+              </a>
+              <a href="tel:+919876543210" class="btn btn-outline">
+                <i data-lucide="phone-call" size="20"></i> Call Us
+              </a>
+            </div>
+          </div>
+          <div class="tai-cards">
+            <div class="tai-card" onclick="document.getElementById('booking').scrollIntoView({behavior: 'smooth'});">
+              <span class="tai-corner-sparkle">✨</span>
+              <div class="tai-icon-container">🎟️</div>
+              <div class="tai-card-title">VIP Slotting</div>
+              <p class="tai-card-desc">Official Special Entry Darshan coordinated.</p>
+            </div>
+            <div class="tai-card" onclick="document.getElementById('services').scrollIntoView({behavior: 'smooth'});">
+              <span class="tai-corner-sparkle">✨</span>
+              <div class="tai-icon-container">🚗</div>
+              <div class="tai-card-title">Elite Fleet</div>
+              <p class="tai-card-desc">Clean, fully sanitized AC Sedans & SUVs.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 1: Premium Car Rentals -->
+      <div class="hero-slide" id="slide-1">
+        <div class="slide-overlay"></div>
+        <img class="slide-bg" src="images/hero3.jpg" alt="Premium Cabs Fleet">
+        <div class="hero-content-wrap">
+          <div class="hero-text-section">
+            <span class="slide-badge">🚗 Premium Car Rentals</span>
+            <h1 class="slide-h1">Travel in Comfort with Our <span>Luxury Cabs</span></h1>
+            <p class="slide-p">Pristine, sanitized Sedans, SUVs, and Tempo Travellers for your family's smooth pilgrimage.</p>
+            <div class="slide-cta-wrap">
+              <a href="#services" class="btn btn-primary">
+                <i data-lucide="car" size="20"></i> View Fleet
+              </a>
+              <a href="tel:+919876543210" class="btn btn-outline">
+                <i data-lucide="phone-call" size="20"></i> Call Us
+              </a>
+            </div>
+          </div>
+          <div class="tai-cards">
+            <div class="tai-card" onclick="document.getElementById('services').scrollIntoView({behavior: 'smooth'});">
+              <span class="tai-corner-sparkle">✨</span>
+              <div class="tai-icon-container">🌟</div>
+              <div class="tai-card-title">Innova Crysta</div>
+              <p class="tai-card-desc">Premium multi-purpose vehicle for family groups.</p>
+            </div>
+            <div class="tai-card" onclick="document.getElementById('why-choose-us').scrollIntoView({behavior: 'smooth'});">
+              <span class="tai-corner-sparkle">✨</span>
+              <div class="tai-icon-container">👨‍✈️</div>
+              <div class="tai-card-title">Professional Drivers</div>
+              <p class="tai-card-desc">Courteous, experienced local highway drivers.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 2: VIP Special Darshan -->
+      <div class="hero-slide" id="slide-2">
+        <div class="slide-overlay"></div>
+        <img class="slide-bg" src="images/hero4.jpg" alt="VIP Special Darshan">
+        <div class="hero-content-wrap">
+          <div class="hero-text-section">
+            <span class="slide-badge">🎟️ VIP Special Darshan</span>
+            <h1 class="slide-h1">Seamless <span>VIP Entry Darshan</span> Booking</h1>
+            <p class="slide-p">Skip the long queues. We coordinate your official ₹300 special entry tickets and local transport.</p>
+            <div class="slide-cta-wrap">
+              <a href="#booking" class="btn btn-primary">
+                <i data-lucide="ticket" size="20"></i> Book Darshan
+              </a>
+              <a href="tel:+919876543210" class="btn btn-outline">
+                <i data-lucide="phone-call" size="20"></i> Call Us
+              </a>
+            </div>
+          </div>
+          <div class="tai-cards">
+            <div class="tai-card" onclick="document.getElementById('booking').scrollIntoView({behavior: 'smooth'});">
+              <span class="tai-corner-sparkle">✨</span>
+              <div class="tai-icon-container">⚡</div>
+              <div class="tai-card-title">Instant Booking</div>
+              <p class="tai-card-desc">Get direct confirmation for travel schedules.</p>
+            </div>
+            <div class="tai-card" onclick="document.getElementById('why-choose-us').scrollIntoView({behavior: 'smooth'});">
+              <span class="tai-corner-sparkle">✨</span>
+              <div class="tai-icon-container">🛡️</div>
+              <div class="tai-card-title">Safe Transit</div>
+              <p class="tai-card-desc">Strict hygiene protocols and real-time support.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 3: Local Temple Tours -->
+      <div class="hero-slide" id="slide-3">
+        <div class="slide-overlay"></div>
+        <img class="slide-bg" src="images/hero5.jpg" alt="Local Shrines Tour">
+        <div class="hero-content-wrap">
+          <div class="hero-text-section">
+            <span class="slide-badge">🕌 Local Temple Tours</span>
+            <h1 class="slide-h1">Explore Sacred Shrines of <span>South India</span></h1>
+            <p class="slide-p">Tailored day-tours to Sri Kalahasti, Srinivasa Mangapuram, Kanipakam & Vellore Golden Temple.</p>
+            <div class="slide-cta-wrap">
+              <a href="#packages" class="btn btn-primary">
+                <i data-lucide="map-pin" size="20"></i> View Packages
+              </a>
+              <a href="tel:+919876543210" class="btn btn-outline">
+                <i data-lucide="phone-call" size="20"></i> Call Us
+              </a>
+            </div>
+          </div>
+          <div class="tai-cards">
+            <div class="tai-card" onclick="document.getElementById('packages').scrollIntoView({behavior: 'smooth'});">
+              <span class="tai-corner-sparkle">✨</span>
+              <div class="tai-icon-container">🔱</div>
+              <div class="tai-card-title">Kalahasti Tours</div>
+              <p class="tai-card-desc">Special Rahu Ketu Pooja timings coordination.</p>
+            </div>
+            <div class="tai-card" onclick="document.getElementById('packages').scrollIntoView({behavior: 'smooth'});">
+              <span class="tai-corner-sparkle">✨</span>
+              <div class="tai-icon-container">🌸</div>
+              <div class="tai-card-title">Local Shrines</div>
+              <p class="tai-card-desc">Customizable itineraries covering local temples.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 4: Outstation Travel -->
+      <div class="hero-slide" id="slide-4">
+        <div class="slide-overlay"></div>
+        <img class="slide-bg" src="images/hero6.jpg" alt="Outstation Cabs">
+        <div class="hero-content-wrap">
+          <div class="hero-text-section">
+            <span class="slide-badge">💼 Outstation Travel</span>
+            <h1 class="slide-h1">Hassle-Free <span>Outstation Journeys</span></h1>
+            <p class="slide-p">Interstate drop-off and round-trips to Chennai, Bangalore, Vellore & Kanchipuram with expert drivers.</p>
+            <div class="slide-cta-wrap">
+              <a href="#booking" class="btn btn-primary">
+                <i data-lucide="send" size="20"></i> Book Taxi
+              </a>
+              <a href="tel:+919876543210" class="btn btn-outline">
+                <i data-lucide="phone-call" size="20"></i> Call Us
+              </a>
+            </div>
+          </div>
+          <div class="tai-cards">
+            <div class="tai-card" onclick="document.getElementById('packages').scrollIntoView({behavior: 'smooth'});">
+              <span class="tai-corner-sparkle">✨</span>
+              <div class="tai-icon-container">🗺️</div>
+              <div class="tai-card-title">All Permits</div>
+              <p class="tai-card-desc">Interstate tax & toll fees fully included.</p>
+            </div>
+            <div class="tai-card" onclick="document.getElementById('booking').scrollIntoView({behavior: 'smooth'});">
+              <span class="tai-corner-sparkle">✨</span>
+              <div class="tai-icon-container">📍</div>
+              <div class="tai-card-title">Doorstep Pickup</div>
+              <p class="tai-card-desc">Convenient boarding from any location in Tirupati.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 5: Unmatched Reliability -->
+      <div class="hero-slide" id="slide-5">
+        <div class="slide-overlay"></div>
+        <img class="slide-bg" src="images/hero7.jpg" alt="Happy Pilgrims Group">
+        <div class="hero-content-wrap">
+          <div class="hero-text-section">
+            <span class="slide-badge">🤝 Unmatched Reliability</span>
+            <h1 class="slide-h1">Safe &amp; Sacred Pilgrimage <span>Guaranteed</span></h1>
+            <p class="slide-p">Over 5,000+ happy families served since 2016. Certified local drivers and 24/7 dedicated support.</p>
+            <div class="slide-cta-wrap">
+              <a href="#booking" class="btn btn-primary">
+                <i data-lucide="arrow-right-circle" size="20"></i> Get Quote
+              </a>
+              <a href="tel:+919876543210" class="btn btn-outline">
+                <i data-lucide="phone-call" size="20"></i> Call Us
+              </a>
+            </div>
+          </div>
+          <div class="tai-cards">
+            <div class="tai-card" onclick="document.getElementById('testimonials').scrollIntoView({behavior: 'smooth'});">
+              <span class="tai-corner-sparkle">✨</span>
+              <div class="tai-icon-container">⭐</div>
+              <div class="tai-card-title">4.9/5 Rating</div>
+              <p class="tai-card-desc">Highly rated by pilgrims on Google Reviews.</p>
+            </div>
+            <div class="tai-card" onclick="openWhatsAppChat();">
+              <span class="tai-corner-sparkle">✨</span>
+              <div class="tai-icon-container">📞</div>
+              <div class="tai-card-title">24/7 Helpline</div>
+              <p class="tai-card-desc">Always available customer assistance.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slider Indicators (Dots) -->
+      <div class="slider-dots">
+        <button class="sdot active" id="dot-0" onclick="goSlide(0)" aria-label="Go to slide 1"></button>
+        <button class="sdot" id="dot-1" onclick="goSlide(1)" aria-label="Go to slide 2"></button>
+        <button class="sdot" id="dot-2" onclick="goSlide(2)" aria-label="Go to slide 3"></button>
+        <button class="sdot" id="dot-3" onclick="goSlide(3)" aria-label="Go to slide 4"></button>
+        <button class="sdot" id="dot-4" onclick="goSlide(4)" aria-label="Go to slide 5"></button>
+        <button class="sdot" id="dot-5" onclick="goSlide(5)" aria-label="Go to slide 6"></button>
+      </div>
+
+      <!-- Slider Arrows -->
+      <button class="snav prev" onclick="prevSlide()" aria-label="Previous Slide">&#8249;</button>
+      <button class="snav next" onclick="nextSlide()" aria-label="Next Slide">&#8250;</button>
+
+    </div>
+  </section>
+
+  <!-- ==========================================
+       SERVICES SECTION
+       ========================================== -->
+  <section class="section" id="services">
+    <div class="container">
+      <div class="section-header reveal">
+        <h2>Our Premium Services</h2>
+        <p>Reliable transit, customizable schedules, and special entry assistance tailored to make your journey completely stress-free.</p>
+      </div>
+
+      <div class="services-grid">
+        <!-- Service Card 1 -->
+        <div class="service-card reveal reveal-scale delay-100">
+          <div class="service-icon-wrapper">
+            <i data-lucide="car" size="32"></i>
+          </div>
+          <h3>Premium Car Rentals</h3>
+          <p>Choose from a fleet of pristine, fully sanitized vehicles including Innova Crysta, Etios, Swift Dzire, and Tempo Travellers for your family travel.</p>
+        </div>
+
+        <!-- Service Card 2 -->
+        <div class="service-card reveal reveal-scale delay-200">
+          <div class="service-icon-wrapper">
+            <i data-lucide="ticket" size="32"></i>
+          </div>
+          <h3>VIP Darshan Packages</h3>
+          <p>Avoid long queues. We coordinate official Tirumala Special Entry Darshan (₹300 ticket) packages, completing travel & VIP slotting smoothly in one go.</p>
+        </div>
+
+        <!-- Service Card 3 -->
+        <div class="service-card reveal reveal-scale delay-300">
+          <div class="service-icon-wrapper">
+            <i data-lucide="map-pin" size="32"></i>
+          </div>
+          <h3>Local Temple Tours</h3>
+          <p>Customized guided tours to surrounding holy sites like Padmavathi Temple, Kalahasti (Rahu Ketu Puja), Kanipakam, and Srinivasa Mangapuram.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       PACKAGES SECTION
+       ========================================== -->
+  <section class="section packages" id="packages">
+    <div class="container">
+      <div class="section-header reveal">
+        <h2>Exclusive Tour & Taxi Packages</h2>
+        <p>Premium all-inclusive travel packages curated with utmost care for your spiritual comfort and seamless journey.</p>
+      </div>
+
+      <!-- Category Filters -->
+      <div class="packages-filter reveal">
+        <button class="btn-filter active" data-filter="all">All Packages</button>
+        <button class="btn-filter" data-filter="local">Tirupati & Local</button>
+        <button class="btn-filter" data-filter="outstation">Outstation Tours</button>
+      </div>
+
+      <div class="packages-grid">
+        <!-- Package 1: Arunachalam Packages -->
+        <div class="package-card reveal reveal-scale" data-category="outstation" data-package-id="arunachalam">
+          <div class="package-img-container">
+            <span class="package-badge">Spiritual Tour</span>
+            <span class="package-duration"><i data-lucide="clock" size="14"></i> 1-3 Days</span>
+            <img src="images/arunachalam.jpg" alt="Arunachalam Temple Tour" class="package-img">
+          </div>
+          <div class="package-body">
+            <div class="package-header">
+              <h3 class="package-title">Arunachalam Package</h3>
+              <div class="package-price-box">
+                <p class="package-price-label">Starts at</p>
+                <p class="package-price">₹7,000</p>
+              </div>
+            </div>
+            <ul class="package-features">
+              <li class="package-feature-item"><i data-lucide="check-circle-2" size="16" class="package-feature-icon"></i> Srinivasa Mangapuram & Kanipakam</li>
+              <li class="package-feature-item"><i data-lucide="check-circle-2" size="16" class="package-feature-icon"></i> Sripuram Golden Temple & Arunachalam</li>
+              <li class="package-feature-item"><i data-lucide="check-circle-2" size="16" class="package-feature-icon"></i> Toll Charges & Driver Bata Included</li>
+              <li class="package-feature-item"><i data-lucide="check-circle-2" size="16" class="package-feature-icon"></i> 3-Day Premium Variant at ₹13,000</li>
+            </ul>
+            <div class="package-footer">
+              <div class="package-rating">
+                <i data-lucide="star" size="16" class="star-icon"></i>
+                <i data-lucide="star" size="16" class="star-icon"></i>
+                <i data-lucide="star" size="16" class="star-icon"></i>
+                <i data-lucide="star" size="16" class="star-icon"></i>
+                <i data-lucide="star" size="16" class="star-icon"></i>
+                <span class="rating-text">4.9 (180 reviews)</span>
+              </div>
+              <a href="#booking" class="btn btn-primary package-btn">Book Now</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Package 2: Tirumala Taxi Packages -->
+        <div class="package-card reveal reveal-scale" data-category="local" data-package-id="tirumala-local">
+          <div class="package-img-container">
+            <span class="package-badge package-badge-accent">Best Seller</span>
+            <span class="package-duration"><i data-lucide="clock" size="14"></i> 8 Hours</span>
+            <img src="images/tirumula.jpg" alt="Tirumala Local Taxi Package" class="package-img">
+          </div>
+          <div class="package-body">
+            <div class="package-header">
+              <h3 class="package-title">Tirumala Local Taxi</h3>
+              <div class="package-price-box">
+                <p class="package-price-label">Starts at</p>
+                <p class="package-price">₹3,000</p>
+              </div>
+            </div>
+            <ul class="package-features">
+              <li class="package-feature-item"><i data-lucide="check-circle-2" size="16" class="package-feature-icon"></i> Balaji Darshan Assistance</li>
+              <li class="package-feature-item"><i data-lucide="check-circle-2" size="16" class="package-feature-icon"></i> Padmavathi Amma & Varaha Swamy Temple</li>
+              <li class="package-feature-item"><i data-lucide="check-circle-2" size="16" class="package-feature-icon"></i> ISKCON, Kapila Theertham & Govindaraja</li>
+              <li class="package-feature-item"><i data-lucide="check-circle-2" size="16" class="package-feature-icon"></i> Includes Tolls, Parking & Driver Bata</li>
+            </ul>
+            <div class="package-footer">
+              <div class="package-rating">
+                <i data-lucide="star" size="16" class="star-icon"></i>
+                <i data-lucide="star" size="16" class="star-icon"></i>
+                <i data-lucide="star" size="16" class="star-icon"></i>
+                <i data-lucide="star" size="16" class="star-icon"></i>
+                <i data-lucide="star" size="16" class="star-icon"></i>
+                <span class="rating-text">4.9 (450 reviews)</span>
+              </div>
+              <a href="#booking" class="btn btn-primary package-btn">Book Now</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Package 3: Sri Kalahasti Packages -->
+        <div class="package-card reveal reveal-scale" data-category="local" data-package-id="kalahasti">
+          <div class="package-img-container">
+            <span class="package-badge">Shiva Darshan</span>
+            <span class="package-duration"><i data-lucide="clock" size="14"></i> 1 Day</span>
+            <img src="images/srikalahasti.jpg" alt="Sri Kalahasti Package" class="package-img">
+          </div>
+          <div class="package-body">
+            <div class="package-header">
+              <h3 class="package-title">Sri Kalahasti Package</h3>
+              <div class="package-price-box">
+                <p class="package-price-label">Starts at</p>
+                <p class="package-price">₹2,500</p>
+              </div>
+            </div>
+            <ul class="package-features">
+              <li class="package-feature-item"><i data-lucide="check-circle-2" size="16" class="package-feature-icon"></i> Dedicated trip from Tirupati to Sri Kalahasti</li>
+              <li class="package-feature-item"><i data-lucide="check-circle-2" size="16" class="package-feature-icon"></i> Assist for Rahu Ketu Pooja timings</li>
+              <li class="package-feature-item"><i data-lucide="check-circle-2" size="16" class="package-feature-icon"></i> Safe, Sanitized Sedan or SUV</li>
+              <li class="package-feature-item"><i data-lucide="check-circle-2" size="16" class="package-feature-icon"></i> Toll Charges & Parking Fees included</li>
+            </ul>
+            <div class="package-footer">
+              <div class="package-rating">
+                <i data-lucide="star" size="16" class="star-icon"></i>
+                <i data-lucide="star" size="16" class="star-icon"></i>
+                <i data-lucide="star" size="16" class="star-icon"></i>
+                <i data-lucide="star" size="16" class="star-icon"></i>
+                <i data-lucide="star" size="16" class="star-icon"></i>
+                <span class="rating-text">4.8 (210 reviews)</span>
+              </div>
+              <a href="#booking" class="btn btn-primary package-btn">Book Now</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Package 4: Kanipakam Packages -->
+        <div class="package-card reveal reveal-scale" data-category="local" data-package-id="kanipakam">
+          <div class="package-img-container">
+            <span class="package-badge">Ganesha Temple</span>
+            <span class="package-duration"><i data-lucide="clock" size="14"></i> 1 Day</span>
+            <img src="images/kanipakam.jpg" alt="Kanipakam Ganesha Tour" class="package-img">
+          </div>
+          <div class="package-body">
+            <div class="package-header">
+              <h3 class="package-title">Kanipakam Package</h3>
+              <div class="package-price-box">
+                <p class="package-price-label">Starts at</p>
+                <p class="package-price">₹4,500</p>
+              </div>
+            </div>
+            <ul class="package-features">
+              <li class="package-feature-item"><i data-lucide="check-circle-2" size="16" class="package-feature-icon"></i> Kanipakam Varasiddhi Vinayaka Darshan</li>
+              <li class="package-feature-item"><i data-lucide="check-circle-2" size="16" class="package-feature-icon"></i> Srinivasa Mangapuram stopover on route</li>
+              <li class="package-feature-item"><i data-lucide="check-circle-2" size="16" class="package-feature-icon"></i> Sanitized AC Swift Dzire / Etios</li>
+              <li class="package-feature-item"><i data-lucide="check-circle-2" size="16" class="package-feature-icon"></i> Inclusive of Toll, Parking and Bata</li>
+            </ul>
+            <div class="package-footer">
+              <div class="package-rating">
+                <i data-lucide="star" size="16" class="star-icon"></i>
+                <i data-lucide="star" size="16" class="star-icon"></i>
+                <i data-lucide="star" size="16" class="star-icon"></i>
+                <i data-lucide="star" size="16" class="star-icon"></i>
+                <i data-lucide="star" size="16" class="star-icon"></i>
+                <span class="rating-text">4.8 (190 reviews)</span>
+              </div>
+              <a href="#booking" class="btn btn-primary package-btn">Book Now</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Package 5: Golden Temple Packages -->
+        <div class="package-card reveal reveal-scale" data-category="local" data-package-id="golden-temple">
+          <div class="package-img-container">
+            <span class="package-badge">Golden Temple</span>
+            <span class="package-duration"><i data-lucide="clock" size="14"></i> 1 Day</span>
+            <img src="images/goldenTemple.jpg" alt="Vellore Golden Temple" class="package-img">
+          </div>
+          <div class="package-body">
+            <div class="package-header">
+              <h3 class="package-title">Golden Temple Package</h3>
+              <div class="package-price-box">
+                <p class="package-price-label">Starts at</p>
+                <p class="package-price">₹5,000</p>
+              </div>
+            </div>
+            <ul class="package-features">
+              <li class="package-feature-item"><i data-lucide="check-circle-2" size="16" class="package-feature-icon"></i> Srinivasa Mangapuram & Kanipakam visit</li>
+              <li class="package-feature-item"><i data-lucide="check-circle-2" size="16" class="package-feature-icon"></i> Sripuram Golden Temple (Vellore) Darshan</li>
+              <li class="package-feature-item"><i data-lucide="check-circle-2" size="16" class="package-feature-icon"></i> Interstate Permit and Taxes fully covered</li>
+              <li class="package-feature-item"><i data-lucide="check-circle-2" size="16" class="package-feature-icon"></i> Driver Bata, Tolls & Parking included</li>
+            </ul>
+            <div class="package-footer">
+              <div class="package-rating">
+                <i data-lucide="star" size="16" class="star-icon"></i>
+                <i data-lucide="star" size="16" class="star-icon"></i>
+                <i data-lucide="star" size="16" class="star-icon"></i>
+                <i data-lucide="star" size="16" class="star-icon"></i>
+                <i data-lucide="star" size="16" class="star-icon"></i>
+                <span class="rating-text">4.9 (230 reviews)</span>
+              </div>
+              <a href="#booking" class="btn btn-primary package-btn">Book Now</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Package 6: Kanchipuram Packages -->
+        <div class="package-card reveal reveal-scale" data-category="outstation" data-package-id="kanchipuram">
+          <div class="package-img-container">
+            <span class="package-badge">Silk City Tour</span>
+            <span class="package-duration"><i data-lucide="clock" size="14"></i> 1 Day</span>
+            <img src="images/kanchipuram.jpg" alt="Kanchipuram Silk & Temples" class="package-img">
+          </div>
+          <div class="package-body">
+            <div class="package-header">
+              <h3 class="package-title">Kanchipuram Package</h3>
+              <div class="package-price-box">
+                <p class="package-price-label">Starts at</p>
+                <p class="package-price">₹5,000</p>
+              </div>
+            </div>
+            <ul class="package-features">
+              <li class="package-feature-item"><i data-lucide="check-circle-2" size="16" class="package-feature-icon"></i> Siva Kanchi, Vishnu Kanchi & Kamakshi Temple</li>
+              <li class="package-feature-item"><i data-lucide="check-circle-2" size="16" class="package-feature-icon"></i> Kanchipuram Saree Shopping & Tiruttani Temple</li>
+              <li class="package-feature-item"><i data-lucide="check-circle-2" size="16" class="package-feature-icon"></i> Tolls, Parking and Driver Bata included</li>
+              <li class="package-feature-item"><i data-lucide="check-circle-2" size="16" class="package-feature-icon"></i> Round-trip transit back to Tirupati</li>
+            </ul>
+            <div class="package-footer">
+              <div class="package-rating">
+                <i data-lucide="star" size="16" class="star-icon"></i>
+                <i data-lucide="star" size="16" class="star-icon"></i>
+                <i data-lucide="star" size="16" class="star-icon"></i>
+                <i data-lucide="star" size="16" class="star-icon"></i>
+                <i data-lucide="star" size="16" class="star-icon"></i>
+                <span class="rating-text">4.8 (340 reviews)</span>
+              </div>
+              <a href="#booking" class="btn btn-primary package-btn">Book Now</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Package 7: Chennai Taxi Packages -->
+        <div class="package-card reveal reveal-scale" data-category="outstation" data-package-id="chennai">
+          <div class="package-img-container">
+            <span class="package-badge">Airport / Drop</span>
+            <span class="package-duration"><i data-lucide="clock" size="14"></i> 1 Day</span>
+            <img src="images/chennai.jpg" alt="Chennai Taxi Package" class="package-img">
+          </div>
+          <div class="package-body">
+            <div class="package-header">
+              <h3 class="package-title">Chennai Taxi Package</h3>
+              <div class="package-price-box">
+                <p class="package-price-label">Starts at</p>
+                <p class="package-price">₹5,000</p>
+              </div>
+            </div>
+            <ul class="package-features">
+              <li class="package-feature-item"><i data-lucide="check-circle-2" size="16" class="package-feature-icon"></i> Tirupati to Chennai pickup or drop-off</li>
+              <li class="package-feature-item"><i data-lucide="check-circle-2" size="16" class="package-feature-icon"></i> Flat-rate pricing with no hidden allowances</li>
+              <li class="package-feature-item"><i data-lucide="check-circle-2" size="16" class="package-feature-icon"></i> Toll charges, interstate taxes fully covered</li>
+              <li class="package-feature-item"><i data-lucide="check-circle-2" size="16" class="package-feature-icon"></i> Experienced national highway drivers</li>
+            </ul>
+            <div class="package-footer">
+              <div class="package-rating">
+                <i data-lucide="star" size="16" class="star-icon"></i>
+                <i data-lucide="star" size="16" class="star-icon"></i>
+                <i data-lucide="star" size="16" class="star-icon"></i>
+                <i data-lucide="star" size="16" class="star-icon"></i>
+                <i data-lucide="star" size="16" class="star-icon"></i>
+                <span class="rating-text">4.9 (290 reviews)</span>
+              </div>
+              <a href="#booking" class="btn btn-primary package-btn">Book Now</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Package 8: Srisailam Taxi Packages -->
+        <div class="package-card reveal reveal-scale" data-category="outstation" data-package-id="srisailam">
+          <div class="package-img-container">
+            <span class="package-badge">Jyotirlinga Tour</span>
+            <span class="package-duration"><i data-lucide="clock" size="14"></i> 2 Days</span>
+            <img src="images/srisailam.jpg" alt="Srisailam Temple Tour" class="package-img">
+          </div>
+          <div class="package-body">
+            <div class="package-header">
+              <h3 class="package-title">Srisailam Taxi Package</h3>
+              <div class="package-price-box">
+                <p class="package-price-label">Starts at</p>
+                <p class="package-price">₹15,500</p>
+              </div>
+            </div>
+            <ul class="package-features">
+              <li class="package-feature-item"><i data-lucide="check-circle-2" size="16" class="package-feature-icon"></i> Tirupati to Penchalakona sightseeing</li>
+              <li class="package-feature-item"><i data-lucide="check-circle-2" size="16" class="package-feature-icon"></i> Srisailam Mallikarjuna Swamy Temple Darshan</li>
+              <li class="package-feature-item"><i data-lucide="check-circle-2" size="16" class="package-feature-icon"></i> One-way drop-off to Hyderabad included</li>
+              <li class="package-feature-item"><i data-lucide="check-circle-2" size="16" class="package-feature-icon"></i> Hill ghat road safety certified drivers</li>
+            </ul>
+            <div class="package-footer">
+              <div class="package-rating">
+                <i data-lucide="star" size="16" class="star-icon"></i>
+                <i data-lucide="star" size="16" class="star-icon"></i>
+                <i data-lucide="star" size="16" class="star-icon"></i>
+                <i data-lucide="star" size="16" class="star-icon"></i>
+                <i data-lucide="star" size="16" class="star-icon"></i>
+                <span class="rating-text">4.8 (150 reviews)</span>
+              </div>
+              <a href="#booking" class="btn btn-primary package-btn">Book Now</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Package 9: Rameswaram Packages -->
+        <div class="package-card reveal reveal-scale" data-category="outstation" data-package-id="rameswaram">
+          <div class="package-img-container">
+            <span class="package-badge package-badge-accent">Grand Tour</span>
+            <span class="package-duration"><i data-lucide="clock" size="14"></i> 4 Days</span>
+            <img src="images/rameshvaram.jpg" alt="Rameswaram Temple Corridors" class="package-img">
+          </div>
+          <div class="package-body">
+            <div class="package-header">
+              <h3 class="package-title">Rameswaram Package</h3>
+              <div class="package-price-box">
+                <p class="package-price-label">Starts at</p>
+                <p class="package-price">₹35,000</p>
+              </div>
+            </div>
+            <ul class="package-features">
+              <li class="package-feature-item"><i data-lucide="check-circle-2" size="16" class="package-feature-icon"></i> Visit 10 historic temples in Tamil Nadu</li>
+              <li class="package-feature-item"><i data-lucide="check-circle-2" size="16" class="package-feature-icon"></i> Ramanathaswamy Temple, Dhanushkodi, Madurai</li>
+              <li class="package-feature-item"><i data-lucide="check-circle-2" size="16" class="package-feature-icon"></i> Multi-day premium hotel stays & guide</li>
+              <li class="package-feature-item"><i data-lucide="check-circle-2" size="16" class="package-feature-icon"></i> Sanitized SUV/Traveller for family group</li>
+            </ul>
+            <div class="package-footer">
+              <div class="package-rating">
+                <i data-lucide="star" size="16" class="star-icon"></i>
+                <i data-lucide="star" size="16" class="star-icon"></i>
+                <i data-lucide="star" size="16" class="star-icon"></i>
+                <i data-lucide="star" size="16" class="star-icon"></i>
+                <i data-lucide="star" size="16" class="star-icon"></i>
+                <span class="rating-text">5.0 (95 reviews)</span>
+              </div>
+              <a href="#booking" class="btn btn-primary package-btn">Book Now</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Package 10: Pondicherry Taxi Packages -->
+        <div class="package-card reveal reveal-scale" data-category="outstation" data-package-id="pondicherry">
+          <div class="package-img-container">
+            <span class="package-badge">Beach Trip</span>
+            <span class="package-duration"><i data-lucide="clock" size="14"></i> 2 Days</span>
+            <img src="images/pondicherry.jpg" alt="Pondicherry Beaches" class="package-img">
+          </div>
+          <div class="package-body">
+            <div class="package-header">
+              <h3 class="package-title">Pondicherry Taxi Package</h3>
+              <div class="package-price-box">
+                <p class="package-price-label">Starts at</p>
+                <p class="package-price">₹10,500</p>
+              </div>
+            </div>
+            <ul class="package-features">
+              <li class="package-feature-item"><i data-lucide="check-circle-2" size="16" class="package-feature-icon"></i> Auroville, Paradise Beach & White Town</li>
+              <li class="package-feature-item"><i data-lucide="check-circle-2" size="16" class="package-feature-icon"></i> Rock Beach & Mahatma Gandhi Statue sightseeing</li>
+              <li class="package-feature-item"><i data-lucide="check-circle-2" size="16" class="package-feature-icon"></i> AC Sedan/SUV with limit of 600km covered</li>
+              <li class="package-feature-item"><i data-lucide="check-circle-2" size="16" class="package-feature-icon"></i> Option for 3 Days (₹18k) / 4 Days (₹24k)</li>
+            </ul>
+            <div class="package-footer">
+              <div class="package-rating">
+                <i data-lucide="star" size="16" class="star-icon"></i>
+                <i data-lucide="star" size="16" class="star-icon"></i>
+                <i data-lucide="star" size="16" class="star-icon"></i>
+                <i data-lucide="star" size="16" class="star-icon"></i>
+                <i data-lucide="star" size="16" class="star-icon"></i>
+                <span class="rating-text">4.8 (110 reviews)</span>
+              </div>
+              <a href="#booking" class="btn btn-primary package-btn">Book Now</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Package 11: Mahabalipuram Taxi Packages -->
+        <div class="package-card reveal reveal-scale" data-category="outstation" data-package-id="mahabalipuram">
+          <div class="package-img-container">
+            <span class="package-badge">Heritage beach</span>
+            <span class="package-duration"><i data-lucide="clock" size="14"></i> 1 Day</span>
+            <img src="images/mahabalipuram.jpg" alt="Mahabalipuram Shore Temples" class="package-img">
+          </div>
+          <div class="package-body">
+            <div class="package-header">
+              <h3 class="package-title">Mahabalipuram Taxi</h3>
+              <div class="package-price-box">
+                <p class="package-price-label">Starts at</p>
+                <p class="package-price">₹6,500</p>
+              </div>
+            </div>
+            <ul class="package-features">
+              <li class="package-feature-item"><i data-lucide="check-circle-2" size="16" class="package-feature-icon"></i> UNESCO Shore Temple & Pancha Rathas Tour</li>
+              <li class="package-feature-item"><i data-lucide="check-circle-2" size="16" class="package-feature-icon"></i> Travel through ECR scenic coastal highway</li>
+              <li class="package-feature-item"><i data-lucide="check-circle-2" size="16" class="package-feature-icon"></i> Dedicated clean taxi with pickup & drop-off</li>
+              <li class="package-feature-item"><i data-lucide="check-circle-2" size="16" class="package-feature-icon"></i> Tolls, interstate taxes & driver bata covered</li>
+            </ul>
+            <div class="package-footer">
+              <div class="package-rating">
+                <i data-lucide="star" size="16" class="star-icon"></i>
+                <i data-lucide="star" size="16" class="star-icon"></i>
+                <i data-lucide="star" size="16" class="star-icon"></i>
+                <i data-lucide="star" size="16" class="star-icon"></i>
+                <i data-lucide="star" size="16" class="star-icon"></i>
+                <span class="rating-text">4.8 (85 reviews)</span>
+              </div>
+              <a href="#booking" class="btn btn-primary package-btn">Book Now</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Package 12: Panchalinga Packages -->
+        <div class="package-card reveal reveal-scale" data-category="outstation" data-package-id="panchalinga">
+          <div class="package-img-container">
+            <span class="package-badge">Panchabhuta</span>
+            <span class="package-duration"><i data-lucide="clock" size="14"></i> 3 Days</span>
+            <img src="images/panchilingeswara.jpg" alt="Panchalinga Temple Pillars" class="package-img">
+          </div>
+          <div class="package-body">
+            <div class="package-header">
+              <h3 class="package-title">Panchalinga Package</h3>
+              <div class="package-price-box">
+                <p class="package-price-label">Starts at</p>
+                <p class="package-price">₹18,500</p>
+              </div>
+            </div>
+            <ul class="package-features">
+              <li class="package-feature-item"><i data-lucide="check-circle-2" size="16" class="package-feature-icon"></i> 5 Element Shiva Temples (Panchabhuta Sthalam)</li>
+              <li class="package-feature-item"><i data-lucide="check-circle-2" size="16" class="package-feature-icon"></i> Covers Kalahasti, Kanchi, Chidambaram, etc.</li>
+              <li class="package-feature-item"><i data-lucide="check-circle-2" size="16" class="package-feature-icon"></i> Professional multi-lingual driver assist</li>
+              <li class="package-feature-item"><i data-lucide="check-circle-2" size="16" class="package-feature-icon"></i> Safe group transfers with full tolls & permits</li>
+            </ul>
+            <div class="package-footer">
+              <div class="package-rating">
+                <i data-lucide="star" size="16" class="star-icon"></i>
+                <i data-lucide="star" size="16" class="star-icon"></i>
+                <i data-lucide="star" size="16" class="star-icon"></i>
+                <i data-lucide="star" size="16" class="star-icon"></i>
+                <i data-lucide="star" size="16" class="star-icon"></i>
+                <span class="rating-text">4.9 (120 reviews)</span>
+              </div>
+              <a href="#booking" class="btn btn-primary package-btn">Book Now</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Package 13: Tamil Nadu Packages -->
+        <div class="package-card reveal reveal-scale" data-category="outstation" data-package-id="tamilnadu">
+          <div class="package-img-container">
+            <span class="package-badge package-badge-accent">Grand Heritage</span>
+            <span class="package-duration"><i data-lucide="clock" size="14"></i> 5 Days</span>
+            <img src="images/tamilnadu.jpg" alt="Tamil Nadu Temple Gopuram" class="package-img">
+          </div>
+          <div class="package-body">
+            <div class="package-header">
+              <h3 class="package-title">Tamil Nadu Package</h3>
+              <div class="package-price-box">
+                <p class="package-price-label">Starts at</p>
+                <p class="package-price">₹42,000</p>
+              </div>
+            </div>
+            <ul class="package-features">
+              <li class="package-feature-item"><i data-lucide="check-circle-2" size="16" class="package-feature-icon"></i> Madurai Meenakshi, Tanjore Big Temple, Trichy</li>
+              <li class="package-feature-item"><i data-lucide="check-circle-2" size="16" class="package-feature-icon"></i> Extensive South Indian culture & heritage tour</li>
+              <li class="package-feature-item"><i data-lucide="check-circle-2" size="16" class="package-feature-icon"></i> Premium hotel rooms & multi-state permits covered</li>
+              <li class="package-feature-item"><i data-lucide="check-circle-2" size="16" class="package-feature-icon"></i> Sanitized luxury SUV with top-tier driver</li>
+            </ul>
+            <div class="package-footer">
+              <div class="package-rating">
+                <i data-lucide="star" size="16" class="star-icon"></i>
+                <i data-lucide="star" size="16" class="star-icon"></i>
+                <i data-lucide="star" size="16" class="star-icon"></i>
+                <i data-lucide="star" size="16" class="star-icon"></i>
+                <i data-lucide="star" size="16" class="star-icon"></i>
+                <span class="rating-text">5.0 (140 reviews)</span>
+              </div>
+              <a href="#booking" class="btn btn-primary package-btn">Book Now</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       TRUST SECTION (STATISTICS)
+       ========================================== -->
+  <section class="trust">
+    <div class="container">
+      <div class="stats-grid">
+        <!-- Stat Item 1 -->
+        <div class="stat-card reveal reveal-scale delay-100">
+          <div class="stat-number" data-target="10">0</div>
+          <div class="stat-label">Years of Experience</div>
+        </div>
+        <!-- Stat Item 2 -->
+        <div class="stat-card reveal reveal-scale delay-200">
+          <div class="stat-number" data-target="5000">0</div>
+          <div class="stat-label">Happy Pilgrims Served</div>
+        </div>
+        <!-- Stat Item 3 -->
+        <div class="stat-card reveal reveal-scale delay-300">
+          <div class="stat-number" data-target="24">0</div>
+          <div class="stat-label">24/7 Customer Support</div>
+        </div>
+        <!-- Stat Item 4 -->
+        <div class="stat-card reveal reveal-scale delay-400">
+          <div class="stat-number" data-target="100">0</div>
+          <div class="stat-label">Safe & Comfortable Travel</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       WHY CHOOSE US SECTION
+       ========================================== -->
+  <section class="section" id="why-choose-us">
+    <div class="container">
+      <div class="section-header reveal">
+        <h2>Why Travel with Us?</h2>
+        <p>We pride ourselves on offering professional services, maintaining high-standard vehicles, and prioritizing your spiritual comfort.</p>
+      </div>
+
+      <div class="why-choose-us-grid">
+        <!-- Card 1 -->
+        <div class="why-card why-card-glass reveal reveal-left delay-100">
+          <div class="why-icon-box">
+            <i data-lucide="shield-check" size="24"></i>
+          </div>
+          <h3>Professional Drivers</h3>
+          <p>Our drivers are verified, highly experienced in ghat-road driving, polite, and well-versed in local routes and languages.</p>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="why-card why-card-glass reveal reveal-scale delay-200">
+          <div class="why-icon-box">
+            <i data-lucide="sparkles" size="24"></i>
+          </div>
+          <h3>Sanitized Vehicles</h3>
+          <p>All cars undergo thorough interior sanitization and deep cleaning before every trip, ensuring you have a hygienic, clean ride.</p>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="why-card why-card-glass reveal reveal-right delay-100">
+          <div class="why-icon-box">
+            <i data-lucide="indian-rupee" size="24"></i>
+          </div>
+          <h3>Transparent Pricing</h3>
+          <p>No hidden charges, surprise driver allowances, or hidden toll fees. What we quote at booking is exactly what you pay.</p>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="why-card why-card-glass reveal reveal-left delay-100">
+          <div class="why-icon-box">
+            <i data-lucide="clock-3" size="24"></i>
+          </div>
+          <h3>Instant Booking</h3>
+          <p>Book online or via WhatsApp in seconds. Receive immediate driver details, pickup confirmation, and digital trip receipts.</p>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="why-card why-card-glass reveal reveal-scale delay-200">
+          <div class="why-icon-box">
+            <i data-lucide="award" size="24"></i>
+          </div>
+          <h3>Local Expertise</h3>
+          <p>Deep knowledge of darshan rules, laddu collection processes, tonsuring procedures, and specific temple time slots.</p>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="why-card why-card-glass reveal reveal-right delay-100">
+          <div class="why-icon-box">
+            <i data-lucide="phone-call" size="24"></i>
+          </div>
+          <h3>24/7 Customer Support</h3>
+          <p>A dedicated help desk operating 24 hours a day to resolve queries, assist in changes, or manage emergency travel adjustments.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       BOOKING FORM SECTION
+       ========================================== -->
+  <section class="section booking-section" id="booking">
+    <div class="container">
+      <div class="booking-container reveal reveal-scale">
+        
+        <!-- Left Side: Interactive Form -->
+        <div class="booking-form-side">
+          <h3>Secure Your Booking</h3>
+          <p>Input your travel details and our concierge will contact you within 15 minutes with a custom quote.</p>
+          
+          <form id="booking-form" onsubmit="handleFormSubmit(event)">
+            <div class="form-grid">
+              
+              <!-- Full Name -->
+              <div class="form-group">
+                <input type="text" id="full-name" class="form-input" placeholder=" " required>
+                <label for="full-name" class="form-label">Full Name</label>
+              </div>
+
+              <!-- Phone Number -->
+              <div class="form-group">
+                <input type="tel" id="phone" class="form-input" placeholder=" " required pattern="[0-9]{10}">
+                <label for="phone" class="form-label">Phone Number (10 digits)</label>
+              </div>
+
+              <!-- Date of Travel -->
+              <div class="form-group form-group-fixed">
+                <input type="date" id="travel-date" class="form-input" required min="2026-06-22">
+                <label for="travel-date" class="form-label">Travel Date</label>
+              </div>
+
+              <!-- Package Select -->
+              <div class="form-group form-group-fixed">
+                <select id="package-select" class="form-input" required>
+                  <option value="" disabled selected>Select Package</option>
+                  <option value="arunachalam">Arunachalam Package (₹7,000)</option>
+                  <option value="tirumala-local">Tirumala Local Taxi (₹3,000)</option>
+                  <option value="kalahasti">Sri Kalahasti Package (₹2,500)</option>
+                  <option value="kanipakam">Kanipakam Package (₹4,500)</option>
+                  <option value="golden-temple">Golden Temple Package (₹5,000)</option>
+                  <option value="kanchipuram">Kanchipuram Package (₹5,000)</option>
+                  <option value="chennai">Chennai Taxi Package (₹5,000)</option>
+                  <option value="srisailam">Srisailam Taxi Package (₹15,500)</option>
+                  <option value="rameswaram">Rameswaram Package (₹35,000)</option>
+                  <option value="pondicherry">Pondicherry Taxi Package (₹10,500)</option>
+                  <option value="mahabalipuram">Mahabalipuram Taxi (₹6,500)</option>
+                  <option value="panchalinga">Panchalinga Package (₹18,500)</option>
+                  <option value="tamilnadu">Tamil Nadu Package (₹42,000)</option>
+                  <option value="custom-cab">Only Cab Hire (Custom Route)</option>
+                </select>
+                <label for="package-select" class="form-label">Select Package</label>
+              </div>
+
+              <!-- Additional Message -->
+              <div class="form-group form-full-width">
+                <textarea id="message" class="form-input" placeholder=" " rows="4" style="resize: none;"></textarea>
+                <label for="message" class="form-label">Special Requests (Number of passengers, pickup point etc.)</label>
+              </div>
+
+              <!-- Submit Button -->
+              <div class="form-full-width">
+                <button type="submit" class="btn btn-primary" style="width: 100%; padding: 1rem 2rem;">
+                  <i data-lucide="check" size="20"></i> Request Custom Quote
+                </button>
+              </div>
+
+            </div>
+          </form>
+        </div>
+
+        <!-- Right Side: Side Graphic Image -->
+        <div class="booking-image-side">
+          <img src="images/car3.jpeg" alt="Scenic Tirupati Ghat Road Winding Curve" class="booking-side-img">
+          <div class="booking-image-overlay">
+            <div class="booking-image-badge">
+              <i data-lucide="award" size="16"></i> Verified Safety Partner
+            </div>
+            <h4>Hassle-Free Pilgrimage</h4>
+            <p>Every driver is trained in hilly terrain maneuvers, and every vehicle features integrated safety trackers to ensure your family's protection.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Form Success Modal -->
+  <div class="success-modal" id="success-modal">
+    <div class="success-card">
+      <div class="success-icon-container">
+        <i data-lucide="badge-check" size="48"></i>
+      </div>
+      <h3>Booking Request Sent!</h3>
+      <p>Thank you for choosing Vamsi Travels. A booking executive has received your details and will call you on your provided number within 15 minutes to confirm availability.</p>
+      <button class="btn btn-primary" onclick="closeSuccessModal()">Close</button>
+    </div>
+  </div>
+
+  <!-- ==========================================
+       MASONRY GALLERY SECTION
+       ========================================== -->
+  <section class="section" id="gallery">
+    <div class="container">
+      <div class="section-header reveal">
+        <h2>Tour Gallery</h2>
+        <p>Glimpses of sacred South Indian temples and our premium vehicles available for comfortable travel.</p>
+      </div>
+
+      <div class="gallery-grid">
+        <!-- Item 1 (Temple Gopuram) -->
+        <div class="gallery-item row-span-2 reveal reveal-scale delay-100" onclick="openLightbox(0)">
+          <img src="https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=800&q=80" alt="Lord Venkateswara Temple Main Entrance Gopuram, Tirupati">
+          <div class="gallery-overlay">
+            <div class="gallery-overlay-icon"><i data-lucide="zoom-in" size="20"></i></div>
+            <h4>Tirupati Gopuram</h4>
+            <p>The glorious gateway to Lord Venkateswara</p>
+          </div>
+        </div>
+
+        <!-- Item 2 (Mountain/Valley Hills) -->
+        <div class="gallery-item reveal reveal-scale delay-200" onclick="openLightbox(1)">
+          <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80" alt="Scenic green mountains view of Tirumala Hills path">
+          <div class="gallery-overlay">
+            <div class="gallery-overlay-icon"><i data-lucide="zoom-in" size="20"></i></div>
+            <h4>Tirumala Hills Pathway</h4>
+            <p>Breathtaking mountain curves along the ghat road</p>
+          </div>
+        </div>
+
+        <!-- Item 3 (Premium Sedan Cab) -->
+        <div class="gallery-item reveal reveal-scale delay-300" onclick="openLightbox(2)">
+          <img src="images/car1.jpeg" alt="Luxury premium white sedan cab ready for family tour">
+          <div class="gallery-overlay">
+            <div class="gallery-overlay-icon"><i data-lucide="zoom-in" size="20"></i></div>
+            <h4>Premium Sedans</h4>
+            <p>Perfect for corporate visitors or small families</p>
+          </div>
+        </div>
+
+        <!-- Item 4 (Temple Worship/Devotion) -->
+        <div class="gallery-item col-span-2 reveal reveal-scale delay-100" onclick="openLightbox(3)">
+          <img src="https://images.unsplash.com/photo-1561361058-c24cecae35ca?auto=format&fit=crop&w=800&q=80" alt="Holy temple oil lamps lit for prayer ceremony, Darshan rituals">
+          <div class="gallery-overlay">
+            <div class="gallery-overlay-icon"><i data-lucide="zoom-in" size="20"></i></div>
+            <h4>Evening Aarati Lamps</h4>
+            <p>Traditional prayers organized during local tours</p>
+          </div>
+        </div>
+
+        <!-- Item 5 (Luxury SUV Innova) -->
+        <div class="gallery-item reveal reveal-scale delay-200" onclick="openLightbox(4)">
+          <img src="images/car2.jpeg" alt="Luxury SUV Innova traveling on smooth highway roads to temple">
+          <div class="gallery-overlay">
+            <div class="gallery-overlay-icon"><i data-lucide="zoom-in" size="20"></i></div>
+            <h4>SUV Cabs</h4>
+            <p>Spacious vehicles for a comfortable bumpy-free trip</p>
+          </div>
+        </div>
+
+        <!-- Item 6 (Scenic highway bend) -->
+        <div class="gallery-item reveal reveal-scale delay-300" onclick="openLightbox(5)">
+          <img src="images/car4.jpeg" alt="Scenic long distance travel highway surrounded by trees and mountains">
+          <div class="gallery-overlay">
+            <div class="gallery-overlay-icon"><i data-lucide="zoom-in" size="20"></i></div>
+            <h4>Outstation Long Drives</h4>
+            <p>Travel in absolute peace from Bangalore or Chennai</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Lightbox Modal -->
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-btn lightbox-prev" onclick="changeLightboxImage(-1)">
+      <i data-lucide="chevron-left" size="32"></i>
+    </button>
+    <div class="lightbox-content-wrapper">
+      <button class="lightbox-close" onclick="closeLightbox()">
+        <i data-lucide="x" size="36"></i>
+      </button>
+      <img src="" alt="" class="lightbox-img" id="lightbox-img">
+      <div class="lightbox-caption" id="lightbox-caption">Caption Title</div>
+      <div class="lightbox-subcaption" id="lightbox-subcaption">Sub Caption</div>
+    </div>
+    <button class="lightbox-btn lightbox-next" onclick="changeLightboxImage(1)">
+      <i data-lucide="chevron-right" size="32"></i>
+    </button>
+  </div>
+
+  <!-- ==========================================
+       TESTIMONIALS SECTION
+       ========================================== -->
+  <section class="section testimonials" id="testimonials">
+    <div class="container">
+      <div class="section-header reveal">
+        <h2>Pilgrim Testimonials</h2>
+        <p>Read about the spiritual journeys and comfortable travel experiences of families who rode with us.</p>
+      </div>
+
+      <div class="carousel-container reveal reveal-scale">
+        <div class="carousel-track" id="carousel-track">
+          
+          <!-- Slide 1 -->
+          <div class="testimonial-slide">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&h=200&q=80" alt="Subramanian K, Bangalore" class="testimonial-avatar">
+            <div class="testimonial-stars">
+              <i data-lucide="star" size="18" class="star-icon"></i>
+              <i data-lucide="star" size="18" class="star-icon"></i>
+              <i data-lucide="star" size="18" class="star-icon"></i>
+              <i data-lucide="star" size="18" class="star-icon"></i>
+              <i data-lucide="star" size="18" class="star-icon"></i>
+            </div>
+            <p class="testimonial-text">"We booked the 1-Day VIP Darshan package from Bangalore. The driver arrived exactly at 4:00 AM. He navigated the hills beautifully and helped us through the tonsuring and VIP entry queues. Highly recommended for families with elders."</p>
+            <div class="testimonial-info">
+              <h4>Subramanian K.</h4>
+              <p>Bangalore, Karnataka</p>
+            </div>
+          </div>
+
+          <!-- Slide 2 -->
+          <div class="testimonial-slide">
+            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=200&h=200&q=80" alt="Priyah Sharma, Delhi" class="testimonial-avatar">
+            <div class="testimonial-stars">
+              <i data-lucide="star" size="18" class="star-icon"></i>
+              <i data-lucide="star" size="18" class="star-icon"></i>
+              <i data-lucide="star" size="18" class="star-icon"></i>
+              <i data-lucide="star" size="18" class="star-icon"></i>
+              <i data-lucide="star" size="18" class="star-icon"></i>
+            </div>
+            <p class="testimonial-text">"Excellent coordination. Booking was done directly on WhatsApp, and everything was transparent. The Innova Crysta sent was spotless, clean, and smells pleasant. Driver Ramesh was extremely polite and patiently guided us throughout."</p>
+            <div class="testimonial-info">
+              <h4>Priya Sharma</h4>
+              <p>New Delhi</p>
+            </div>
+          </div>
+
+          <!-- Slide 3 -->
+          <div class="testimonial-slide">
+            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&h=200&q=80" alt="Ananth Raghavan, Chennai" class="testimonial-avatar">
+            <div class="testimonial-stars">
+              <i data-lucide="star" size="18" class="star-icon"></i>
+              <i data-lucide="star" size="18" class="star-icon"></i>
+              <i data-lucide="star" size="18" class="star-icon"></i>
+              <i data-lucide="star" size="18" class="star-icon"></i>
+              <i data-lucide="star" size="18" class="star-icon"></i>
+            </div>
+            <p class="testimonial-text">"Our Rahu Ketu Pooja package to Kalahasti was well planned. The accommodation provided in Tirupati was standard 3-star and premium. They made sure we had our darshan on time without any issues. Exceptional service!"</p>
+            <div class="testimonial-info">
+              <h4>Ananth Raghavan</h4>
+              <p>Chennai, Tamil Nadu</p>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Navigation Buttons -->
+        <button class="carousel-btn carousel-prev" id="carousel-prev">
+          <i data-lucide="chevron-left" size="20"></i>
+        </button>
+        <button class="carousel-btn carousel-next" id="carousel-next">
+          <i data-lucide="chevron-right" size="20"></i>
+        </button>
+
+        <!-- Indicators -->
+        <div class="carousel-indicators" id="carousel-indicators">
+          <span class="indicator active" data-slide="0"></span>
+          <span class="indicator" data-slide="1"></span>
+          <span class="indicator" data-slide="2"></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       FOOTER SECTION
+       ========================================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        
+        <!-- Column 1: Brand -->
+        <div class="footer-brand">
+          <h3><i data-lucide="compass" class="logo-icon"></i> Vamsi Travels</h3>
+          <p>Your premier partner for seamless, spiritual pilgrimage tours to Tirupati and nearby shrines. Providing luxury transit, VIP darshan assistance, and custom family tour plans since 2016.</p>
+          <div class="footer-socials">
+            <a href="#" class="social-icon" aria-label="Facebook"><i data-lucide="facebook" size="18"></i></a>
+            <a href="#" class="social-icon" aria-label="Instagram"><i data-lucide="instagram" size="18"></i></a>
+            <a href="#" class="social-icon" aria-label="Twitter"><i data-lucide="twitter" size="18"></i></a>
+            <a href="#" class="social-icon" aria-label="Youtube"><i data-lucide="youtube" size="18"></i></a>
+          </div>
+        </div>
+
+        <!-- Column 2: Quick Links -->
+        <div>
+          <h4 class="footer-heading">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="#" class="footer-link"><i data-lucide="chevron-right" size="14"></i> Home</a></li>
+            <li><a href="#services" class="footer-link"><i data-lucide="chevron-right" size="14"></i> Services</a></li>
+            <li><a href="#packages" class="footer-link"><i data-lucide="chevron-right" size="14"></i> Packages</a></li>
+            <li><a href="#why-choose-us" class="footer-link"><i data-lucide="chevron-right" size="14"></i> Why Choose Us</a></li>
+            <li><a href="#gallery" class="footer-link"><i data-lucide="chevron-right" size="14"></i> Gallery</a></li>
+            <li><a href="#booking" class="footer-link"><i data-lucide="chevron-right" size="14"></i> Book Online</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Contact Info -->
+        <div>
+          <h4 class="footer-heading">Contact Details</h4>
+          <div class="footer-contact-item">
+            <i data-lucide="map-pin" size="18" class="footer-contact-icon"></i>
+            <span>Vamsi Travels Office,<br>Near RTC Bus Stand,<br>Tirupati, Andhra Pradesh - 517501</span>
+          </div>
+          <div class="footer-contact-item">
+            <i data-lucide="phone" size="18" class="footer-contact-icon"></i>
+            <a href="tel:+919876543210">+91 98765 43210</a>
+          </div>
+          <div class="footer-contact-item">
+            <i data-lucide="mail" size="18" class="footer-contact-icon"></i>
+            <a href="mailto:info@vamsitravelstirupati.com">info@vamsitravelstirupati.com</a>
+          </div>
+        </div>
+
+        <!-- Column 4: Quick Action & WhatsApp -->
+        <div>
+          <h4 class="footer-heading">Support & Chat</h4>
+          <p style="font-size: 14.5px; margin-bottom: 1.5rem; line-height: 1.5;">Need instant help with VIP slots? Chat with a reservation manager now on WhatsApp for quick bookings.</p>
+          <a href="https://wa.me/919876543210?text=Hi%20Vamsi%20Travels,%20I%20would%20like%20to%20book%20a%20Tirupati%20Darshan%20package." target="_blank" class="footer-whatsapp-btn">
+            <i data-lucide="message-square" size="18"></i> Chat on WhatsApp
+          </a>
+        </div>
+
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="footer-bottom">
+        <div>&copy; 2026 Vamsi Travels Tirupati. All Rights Reserved.</div>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms & Conditions</a>
+          <a href="#">Sitemap</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Sticky WhatsApp Widget -->
+  <div class="whatsapp-widget" onclick="openWhatsAppChat()">
+    <i data-lucide="message-circle" size="30"></i>
+    <div class="whatsapp-tooltip">Book via WhatsApp Instantly!</div>
+  </div>
+
+
+  <!-- ==========================================
+       JAVASCRIPT LOGIC
+       ========================================== -->
+  <script>
+    // Initialize Lucide Icons
+    lucide.createIcons();
+
+    // ==========================================
+    // HERO SLIDESHOW SYSTEM (Fading & Interactive)
+    // ==========================================
+    const heroSlides = document.querySelectorAll('.hero-slide');
+    const heroDots = document.querySelectorAll('.slider-dots .sdot');
+    let currentHeroSlideIndex = 0;
+    let heroSliderInterval;
+
+    function goSlide(index) {
+      if (index === currentHeroSlideIndex) return;
+      
+      // Remove active class from current slide and dot
+      heroSlides[currentHeroSlideIndex].classList.remove('active');
+      heroDots[currentHeroSlideIndex].classList.remove('active');
+      
+      // Update index
+      currentHeroSlideIndex = index;
+      
+      // Add active class to new slide and dot
+      heroSlides[currentHeroSlideIndex].classList.add('active');
+      heroDots[currentHeroSlideIndex].classList.add('active');
+      
+      // Restart auto-cycle timer to prevent immediate skip after manual interaction
+      startHeroAutoCycle();
+    }
+
+    function nextSlide() {
+      const nextIndex = (currentHeroSlideIndex + 1) % heroSlides.length;
+      goSlide(nextIndex);
+    }
+
+    function prevSlide() {
+      const prevIndex = (currentHeroSlideIndex - 1 + heroSlides.length) % heroSlides.length;
+      goSlide(prevIndex);
+    }
+
+    function startHeroAutoCycle() {
+      stopHeroAutoCycle();
+      heroSliderInterval = setInterval(nextSlide, 6000);
+    }
+
+    function stopHeroAutoCycle() {
+      if (heroSliderInterval) {
+        clearInterval(heroSliderInterval);
+      }
+    }
+
+    // Initialize auto cycle
+    if (heroSlides.length > 1) {
+      startHeroAutoCycle();
+    }
+
+    // ==========================================
+    // PACKAGES FILTER & SELECTION SYSTEM
+    // ==========================================
+    const filterButtons = document.querySelectorAll('.btn-filter');
+    const packageCards = document.querySelectorAll('.packages-grid .package-card');
+    const packageSelect = document.getElementById('package-select');
+
+    filterButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        // Remove active class from all buttons
+        filterButtons.forEach(btn => btn.classList.remove('active'));
+        button.classList.add('active');
+
+        const filterValue = button.getAttribute('data-filter');
+
+        packageCards.forEach(card => {
+          const category = card.getAttribute('data-category');
+          if (filterValue === 'all' || category === filterValue) {
+            card.style.display = 'flex';
+            card.classList.remove('reveal-visible'); // Reset animation state
+            setTimeout(() => {
+              card.classList.add('reveal-visible');
+            }, 50);
+          } else {
+            card.style.display = 'none';
+            card.classList.remove('reveal-visible');
+          }
+        });
+      });
+    });
+
+    // Auto-select package, smooth scroll, and focus Name field when "Book Now" is clicked
+    const bookButtons = document.querySelectorAll('.packages-grid .package-btn');
+    bookButtons.forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault(); // Prevent direct URL jump
+        const card = btn.closest('.package-card');
+        const packageId = card.getAttribute('data-package-id');
+        if (packageId && packageSelect) {
+          packageSelect.value = packageId;
+        }
+        // Smooth scroll to booking section
+        document.getElementById('booking').scrollIntoView({ behavior: 'smooth' });
+        // Focus name input field after scroll finishes
+        setTimeout(() => {
+          document.getElementById('full-name').focus();
+        }, 800);
+      });
+    });
+
+    // ==========================================
+    // NAVBAR SCROLL BEHAVIOR
+    // ==========================================
+    const headerElement = document.getElementById('header');
+    
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 80) {
+        headerElement.classList.remove('header-transparent');
+        headerElement.classList.add('header-scrolled');
+      } else {
+        headerElement.classList.remove('header-scrolled');
+        headerElement.classList.add('header-transparent');
+      }
+    });
+
+    // Active link highlighting on scroll
+    const sectionsList = document.querySelectorAll('section');
+    const navLinksList = document.querySelectorAll('.nav-link');
+
+    window.addEventListener('scroll', () => {
+      let currentSectionId = '';
+      
+      sectionsList.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+        // Adjust threshold
+        if (window.pageYOffset >= (sectionTop - 250)) {
+          currentSectionId = section.getAttribute('id');
+        }
+      });
+
+      navLinksList.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === `#${currentSectionId}`) {
+          link.classList.add('active');
+        }
+      });
+    });
+
+    // ==========================================
+    // MOBILE MENU DRAWER CONTROLS
+    // ==========================================
+    const burgerBtn = document.getElementById('burger-menu-btn');
+    const drawerCloseBtn = document.getElementById('drawer-close-btn');
+    const mobileDrawer = document.getElementById('mobile-drawer');
+    const drawerOverlay = document.getElementById('drawer-overlay');
+
+    burgerBtn.addEventListener('click', openDrawer);
+    drawerCloseBtn.addEventListener('click', closeDrawer);
+    drawerOverlay.addEventListener('click', closeDrawer);
+
+    function openDrawer() {
+      mobileDrawer.classList.add('open');
+      drawerOverlay.classList.add('open');
+      document.body.style.overflow = 'hidden'; // Lock background scroll
+    }
+
+    function closeDrawer() {
+      mobileDrawer.classList.remove('open');
+      drawerOverlay.classList.remove('open');
+      document.body.style.overflow = 'auto'; // Unlock background scroll
+    }
+
+    // ==========================================
+    // SCROLL REVEAL OBSERVER
+    // ==========================================
+    const revealElements = document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale');
+    
+    const revealObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('reveal-visible');
+          // If the element has stats counter, trigger count animation
+          if (entry.target.querySelector('.stat-number') || entry.target.classList.contains('stat-number')) {
+            startCounterAnimation(entry.target);
+          }
+          observer.unobserve(entry.target); // Trigger once
+        }
+      });
+    }, {
+      threshold: 0.15,
+      rootMargin: "0px 0px -50px 0px"
+    });
+
+    revealElements.forEach(el => {
+      revealObserver.observe(el);
+    });
+
+    // ==========================================
+    // STATS COUNT-UP ANIMATION
+    // ==========================================
+    function startCounterAnimation(element) {
+      // It might be a parent container, look for children stat-numbers
+      const counters = element.classList.contains('stat-number') ? [element] : element.querySelectorAll('.stat-number');
+      
+      counters.forEach(counter => {
+        const target = parseInt(counter.getAttribute('data-target'));
+        const duration = 2000; // 2 seconds animation
+        const startTime = performance.now();
+        
+        function updateCounter(currentTime) {
+          const elapsed = currentTime - startTime;
+          const progress = Math.min(elapsed / duration, 1);
+          
+          // Easing function (easeOutQuad)
+          const easeProgress = progress * (2 - progress);
+          const currentValue = Math.floor(easeProgress * target);
+          
+          if (target === 10) {
+            counter.innerText = currentValue + '+';
+          } else if (target === 5000) {
+            counter.innerText = currentValue.toLocaleString() + '+';
+          } else if (target === 24) {
+            counter.innerText = currentValue + '/7';
+          } else if (target === 100) {
+            counter.innerText = currentValue + '%';
+          } else {
+            counter.innerText = currentValue;
+          }
+
+          if (progress < 1) {
+            requestAnimationFrame(updateCounter);
+          }
+        }
+        
+        requestAnimationFrame(updateCounter);
+      });
+    }
+
+    // ==========================================
+    // BOOKING FORM LOGIC
+    // ==========================================
+    const successModal = document.getElementById('success-modal');
+
+    function handleFormSubmit(event) {
+      event.preventDefault();
+      
+      // Basic validation
+      const name = document.getElementById('full-name').value.trim();
+      const phone = document.getElementById('phone').value.trim();
+      const date = document.getElementById('travel-date').value;
+      const packageSelected = document.getElementById('package-select').value;
+
+      if (name && phone && date && packageSelected) {
+        successModal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      }
+    }
+
+    function closeSuccessModal() {
+      successModal.classList.remove('active');
+      document.body.style.overflow = 'auto';
+      document.getElementById('booking-form').reset();
+    }
+
+    // Set minimum date picker input to today's date
+    const dateInput = document.getElementById('travel-date');
+    const today = new Date();
+    const yyyy = today.getFullYear();
+    const mm = String(today.getMonth() + 1).padStart(2, '0');
+    const dd = String(today.getDate()).padStart(2, '0');
+    dateInput.min = `${yyyy}-${mm}-${dd}`;
+
+    // ==========================================
+    // TESTIMONIALS SLIDER CAROUSEL
+    // ==========================================
+    const carouselTrack = document.getElementById('carousel-track');
+    const slides = Array.from(carouselTrack.children);
+    const prevBtn = document.getElementById('carousel-prev');
+    const nextBtn = document.getElementById('carousel-next');
+    const indicatorContainer = document.getElementById('carousel-indicators');
+    const indicators = Array.from(indicatorContainer.children);
+    
+    let currentSlideIndex = 0;
+    let carouselInterval;
+
+    function updateCarousel() {
+      // Calculate translate percentage
+      const translateAmount = -currentSlideIndex * 100;
+      carouselTrack.style.transform = `translateX(${translateAmount}%)`;
+      
+      // Update indicators
+      indicators.forEach((indicator, index) => {
+        if (index === currentSlideIndex) {
+          indicator.classList.add('active');
+        } else {
+          indicator.classList.remove('active');
+        }
+      });
+    }
+
+    function slideNext() {
+      currentSlideIndex = (currentSlideIndex + 1) % slides.length;
+      updateCarousel();
+    }
+
+    function slidePrev() {
+      currentSlideIndex = (currentSlideIndex - 1 + slides.length) % slides.length;
+      updateCarousel();
+    }
+
+    // Start auto slide every 5 seconds
+    function startAutoSlide() {
+      stopAutoSlide();
+      carouselInterval = setInterval(slideNext, 5000);
+    }
+
+    function stopAutoSlide() {
+      if (carouselInterval) {
+        clearInterval(carouselInterval);
+      }
+    }
+
+    nextBtn.addEventListener('click', () => {
+      slideNext();
+      startAutoSlide();
+    });
+
+    prevBtn.addEventListener('click', () => {
+      slidePrev();
+      startAutoSlide();
+    });
+
+    // Indicator Dot Click events
+    indicators.forEach((indicator, index) => {
+      indicator.addEventListener('click', () => {
+        currentSlideIndex = index;
+        updateCarousel();
+        startAutoSlide();
+      });
+    });
+
+    // Start carousel automatically
+    startAutoSlide();
+
+    // Pause on hover
+    carouselTrack.addEventListener('mouseenter', stopAutoSlide);
+    carouselTrack.addEventListener('mouseleave', startAutoSlide);
+
+    // ==========================================
+    // MASONRY GALLERY LIGHTBOX
+    // ==========================================
+    const galleryItems = [
+      {
+        src: 'https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1200&q=80',
+        title: 'Tirupati Gopuram Gate',
+        sub: 'The iconic golden gateway to the primary shrine'
+      },
+      {
+        src: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80',
+        title: 'Tirumala Hills Pathway',
+        sub: 'Breathtaking green mountains and winding roads'
+      },
+      {
+        src: 'images/car1.jpeg',
+        title: 'Premium Sedans Fleet',
+        sub: 'Clean, sanitized, and fully AC luxury cars'
+      },
+      {
+        src: 'https://images.unsplash.com/photo-1561361058-c24cecae35ca?auto=format&fit=crop&w=1200&q=80',
+        title: 'Evening Aarati Lamps',
+        sub: 'Worship arrangements taken care by our tour guides'
+      },
+      {
+        src: 'images/car2.jpeg',
+        title: 'SUV Cabs Selection',
+        sub: 'Spacious SUV vehicle options for larger families'
+      },
+      {
+        src: 'images/car4.jpeg',
+        title: 'Outstation Travel Route',
+        sub: 'Seamless travel crossing state lines with all permits'
+      }
+    ];
+
+    let currentLightboxIndex = 0;
+    const lightboxModal = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const lightboxCaption = document.getElementById('lightbox-caption');
+    const lightboxSubcaption = document.getElementById('lightbox-subcaption');
+
+    function openLightbox(index) {
+      currentLightboxIndex = index;
+      const data = galleryItems[currentLightboxIndex];
+      
+      lightboxImg.src = data.src;
+      lightboxImg.alt = data.title;
+      lightboxCaption.innerText = data.title;
+      lightboxSubcaption.innerText = data.sub;
+      
+      lightboxModal.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+      lightboxModal.classList.remove('active');
+      document.body.style.overflow = 'auto';
+    }
+
+    function changeLightboxImage(direction) {
+      currentLightboxIndex = (currentLightboxIndex + direction + galleryItems.length) % galleryItems.length;
+      const data = galleryItems[currentLightboxIndex];
+      
+      // Smooth fade-in image load
+      lightboxImg.style.opacity = 0;
+      setTimeout(() => {
+        lightboxImg.src = data.src;
+        lightboxImg.alt = data.title;
+        lightboxCaption.innerText = data.title;
+        lightboxSubcaption.innerText = data.sub;
+        lightboxImg.style.opacity = 1;
+      }, 150);
+    }
+
+    // Close lightbox on clicking outside content area
+    lightboxModal.addEventListener('click', (e) => {
+      if (e.target === lightboxModal) {
+        closeLightbox();
+      }
+    });
+
+    // Key event listeners for gallery & lightbox accessibility
+    document.addEventListener('keydown', (e) => {
+      if (!lightboxModal.classList.contains('active')) return;
+      if (e.key === 'Escape') closeLightbox();
+      if (e.key === 'ArrowRight') changeLightboxImage(1);
+      if (e.key === 'ArrowLeft') changeLightboxImage(-1);
+    });
+
+    // ==========================================
+    // FLOATING WHATSAPP INTERACTION
+    // ==========================================
+    function openWhatsAppChat() {
+      const url = "https://wa.me/919876543210?text=Hi%20Vamsi%20Travels,%20I%20would%20like%20to%20enquire%20about%20a%20Tirupati%20pilgrimage%20package.";
+      window.open(url, '_blank');
+    }
+  </script>
+</body>
+</html>

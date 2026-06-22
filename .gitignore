@@ -19,6 +19,7 @@ find_*.js
 # Personal files
 *.pdf
 *.jpeg
+!images/car*.jpeg
 *.pdf
 passportSizePhoto.jpeg
 portfolioimage.jpeg
