@@ -189,6 +189,20 @@
       box-shadow: 0 10px 20px rgba(255, 255, 255, 0.15);
     }
 
+    .btn-whatsapp {
+      border: 2px solid #25d366;
+      color: #25d366;
+      background-color: transparent;
+      backdrop-filter: blur(4px);
+    }
+
+    .btn-whatsapp:hover {
+      background-color: #25d366;
+      color: var(--white) !important;
+      transform: translateY(-2px);
+      box-shadow: 0 10px 20px rgba(37, 211, 102, 0.3);
+    }
+
     .btn-accent {
       background-color: var(--accent);
       color: var(--primary);
@@ -587,6 +601,7 @@
     .slide-cta-wrap {
       display: flex;
       align-items: center;
+      flex-wrap: wrap;
       gap: 1.25rem;
     }
 
@@ -2512,11 +2527,14 @@
       <a href="#gallery" class="drawer-link" onclick="closeDrawer()">Gallery</a>
       <a href="#testimonials" class="drawer-link" onclick="closeDrawer()">Testimonials</a>
     </div>
-    <div class="drawer-footer">
-      <a href="tel:+919885835375" class="btn btn-outline" style="border-color: rgba(255,255,255,0.2);">
+    <div class="drawer-footer" style="display: flex; flex-direction: column; gap: 10px;">
+      <a href="tel:+916300240254" class="btn btn-outline" style="border-color: rgba(255,255,255,0.2); width: 100%;">
         <i data-lucide="phone" size="18"></i> Call Us
       </a>
-      <a href="#booking" class="btn btn-accent" onclick="closeDrawer()">
+      <a href="https://wa.me/916300240254?text=Hi%20Vamsi%20Travels,%20I%20would%20like%20to%20enquire%20about%20a%20booking." target="_blank" class="btn btn-whatsapp" style="width: 100%;">
+        <i data-lucide="message-circle" size="18"></i> WhatsApp
+      </a>
+      <a href="#booking" class="btn btn-accent" onclick="closeDrawer()" style="width: 100%;">
         <i data-lucide="calendar" size="18"></i> Book Online
       </a>
     </div>
@@ -2541,8 +2559,11 @@
               <a href="#booking" class="btn btn-primary">
                 <i data-lucide="arrow-right-circle" size="20"></i> Book Now
               </a>
-              <a href="tel:+919885835375" class="btn btn-outline">
+              <a href="tel:+916300240254" class="btn btn-outline">
                 <i data-lucide="phone-call" size="20"></i> Call Us
+              </a>
+              <a href="https://wa.me/916300240254?text=Hi%20Vamsi%20Travels,%20I%20would%20like%20to%20enquire%20about%20a%20booking." target="_blank" class="btn btn-whatsapp">
+                <i data-lucide="message-circle" size="20"></i> WhatsApp
               </a>
             </div>
           </div>
@@ -2573,11 +2594,14 @@
             <h1 class="slide-h1">Travel in Comfort with Our <span>Luxury Cabs</span></h1>
             <p class="slide-p">Pristine, sanitized Sedans, SUVs, and Tempo Travellers for your family's smooth pilgrimage.</p>
             <div class="slide-cta-wrap">
-              <a href="#services" class="btn btn-primary">
+              <a href="#fleet" class="btn btn-primary">
                 <i data-lucide="car" size="20"></i> View Fleet
               </a>
-              <a href="tel:+919885835375" class="btn btn-outline">
+              <a href="tel:+916300240254" class="btn btn-outline">
                 <i data-lucide="phone-call" size="20"></i> Call Us
+              </a>
+              <a href="https://wa.me/916300240254?text=Hi%20Vamsi%20Travels,%20I%20would%20like%20to%20enquire%20about%20a%20booking." target="_blank" class="btn btn-whatsapp">
+                <i data-lucide="message-circle" size="20"></i> WhatsApp
               </a>
             </div>
           </div>
@@ -2611,8 +2635,11 @@
               <a href="#booking" class="btn btn-primary">
                 <i data-lucide="ticket" size="20"></i> Book Darshan
               </a>
-              <a href="tel:+919885835375" class="btn btn-outline">
+              <a href="tel:+916300240254" class="btn btn-outline">
                 <i data-lucide="phone-call" size="20"></i> Call Us
+              </a>
+              <a href="https://wa.me/916300240254?text=Hi%20Vamsi%20Travels,%20I%20would%20like%20to%20enquire%20about%20a%20booking." target="_blank" class="btn btn-whatsapp">
+                <i data-lucide="message-circle" size="20"></i> WhatsApp
               </a>
             </div>
           </div>
@@ -2646,8 +2673,11 @@
               <a href="#packages" class="btn btn-primary">
                 <i data-lucide="map-pin" size="20"></i> View Packages
               </a>
-              <a href="tel:+919885835375" class="btn btn-outline">
+              <a href="tel:+916300240254" class="btn btn-outline">
                 <i data-lucide="phone-call" size="20"></i> Call Us
+              </a>
+              <a href="https://wa.me/916300240254?text=Hi%20Vamsi%20Travels,%20I%20would%20like%20to%20enquire%20about%20a%20booking." target="_blank" class="btn btn-whatsapp">
+                <i data-lucide="message-circle" size="20"></i> WhatsApp
               </a>
             </div>
           </div>
@@ -2681,8 +2711,11 @@
               <a href="#booking" class="btn btn-primary">
                 <i data-lucide="send" size="20"></i> Book Taxi
               </a>
-              <a href="tel:+919885835375" class="btn btn-outline">
+              <a href="tel:+916300240254" class="btn btn-outline">
                 <i data-lucide="phone-call" size="20"></i> Call Us
+              </a>
+              <a href="https://wa.me/916300240254?text=Hi%20Vamsi%20Travels,%20I%20would%20like%20to%20enquire%20about%20a%20booking." target="_blank" class="btn btn-whatsapp">
+                <i data-lucide="message-circle" size="20"></i> WhatsApp
               </a>
             </div>
           </div>
@@ -2716,8 +2749,11 @@
               <a href="#booking" class="btn btn-primary">
                 <i data-lucide="arrow-right-circle" size="20"></i> Get Quote
               </a>
-              <a href="tel:+919885835375" class="btn btn-outline">
+              <a href="tel:+916300240254" class="btn btn-outline">
                 <i data-lucide="phone-call" size="20"></i> Call Us
+              </a>
+              <a href="https://wa.me/916300240254?text=Hi%20Vamsi%20Travels,%20I%20would%20like%20to%20enquire%20about%20a%20booking." target="_blank" class="btn btn-whatsapp">
+                <i data-lucide="message-circle" size="20"></i> WhatsApp
               </a>
             </div>
           </div>
@@ -2767,7 +2803,7 @@
 
       <div class="services-grid">
         <!-- Service Card 1 -->
-        <div class="service-card reveal reveal-scale delay-100">
+        <div class="service-card reveal reveal-scale delay-100" style="cursor: pointer;" onclick="document.getElementById('fleet').scrollIntoView({behavior: 'smooth'});">
           <div class="service-icon-wrapper">
             <i data-lucide="car" size="32"></i>
           </div>
@@ -3809,7 +3845,11 @@
           </div>
           <div class="footer-contact-item">
             <i data-lucide="phone" size="18" class="footer-contact-icon"></i>
-            <a href="tel:+919885835375">+91 98858 35375</a>
+            <a href="tel:+916300240254">+91 63002 40254</a>
+          </div>
+          <div class="footer-contact-item">
+            <i data-lucide="message-circle" size="18" class="footer-contact-icon" style="color: #25d366;"></i>
+            <a href="https://wa.me/916300240254?text=Hi%20Vamsi%20Travels,%20I%20would%20like%20to%20enquire%20about%20a%20booking." target="_blank">WhatsApp: +91 63002 40254</a>
           </div>
           <div class="footer-contact-item">
             <i data-lucide="mail" size="18" class="footer-contact-icon"></i>
@@ -3821,7 +3861,7 @@
         <div>
           <h4 class="footer-heading">Support & Chat</h4>
           <p style="font-size: 14.5px; margin-bottom: 1.5rem; line-height: 1.5;">Need instant help with VIP slots? Chat with a reservation manager now on WhatsApp for quick bookings.</p>
-          <a href="https://wa.me/919885835375?text=Hi%20Vamsi%20Travels,%20I%20would%20like%20to%20book%20a%20Tirupati%20Darshan%20package." target="_blank" class="footer-whatsapp-btn">
+          <a href="https://wa.me/916300240254?text=Hi%20Vamsi%20Travels,%20I%20would%20like%20to%20book%20a%20Tirupati%20Darshan%20package." target="_blank" class="footer-whatsapp-btn">
             <i data-lucide="message-square" size="18"></i> Chat on WhatsApp
           </a>
         </div>
@@ -4289,7 +4329,7 @@
     // FLOATING WHATSAPP INTERACTION
     // ==========================================
     function openWhatsAppChat() {
-      const url = "https://wa.me/919885835375?text=Hi%20Vamsi%20Travels,%20I%20would%20like%20to%20enquire%20about%20a%20Tirupati%20pilgrimage%20package.";
+      const url = "https://wa.me/916300240254?text=Hi%20Vamsi%20Travels,%20I%20would%20like%20to%20enquire%20about%20a%20Tirupati%20pilgrimage%20package.";
       window.open(url, '_blank');
     }
 
