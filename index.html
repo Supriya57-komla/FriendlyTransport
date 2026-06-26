@@ -4137,9 +4137,27 @@
       const name = document.getElementById('full-name').value.trim();
       const phone = document.getElementById('phone').value.trim();
       const date = document.getElementById('travel-date').value;
-      const packageSelected = document.getElementById('package-select').value;
+      const selectEl = document.getElementById('package-select');
+      const packageSelected = selectEl.options[selectEl.selectedIndex].text;
+      const message = document.getElementById('message').value.trim();
 
       if (name && phone && date && packageSelected) {
+        // Construct the WhatsApp message text
+        let whatsappText = `Hi Vamsi Travels, I would like to make a secure booking:\n`;
+        whatsappText += `• Name: ${name}\n`;
+        whatsappText += `• Phone: ${phone}\n`;
+        whatsappText += `• Travel Date: ${date}\n`;
+        whatsappText += `• Selected Package: ${packageSelected}`;
+        if (message) {
+          whatsappText += `\n• Special Requests: ${message}`;
+        }
+        
+        // WhatsApp URL
+        const url = `https://wa.me/916300240254?text=${encodeURIComponent(whatsappText)}`;
+        
+        // Open WhatsApp in a new window/tab
+        window.open(url, '_blank');
+
         successModal.classList.add('active');
         document.body.style.overflow = 'hidden';
       }
