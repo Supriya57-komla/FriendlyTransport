@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Vamsi Travels — Premium Tirupati Travel & Darshan Packages</title>
+  <link rel="shortcut icon" href="images/logo.jpeg" type="image/jpeg">
   <!-- SEO Meta Tags -->
   <meta name="description" content="Your trusted Tirupati travel partner. Book premium cab services, Tirupati VIP Darshan packages, and customized South Indian temple tours with reliability, comfort, and best-in-class service.">
   <meta name="keywords" content="Tirupati travels, Tirupati Darshan package, Tirupati car rentals, Tirupati tour packages, Vamsi travels Tirupati, Tirupati cab services">
@@ -1965,6 +1966,215 @@
       100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
     }
 
+    /* Brand Logo Image */
+    .logo-img {
+      height: 38px;
+      width: 38px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid var(--accent);
+      transition: transform 0.5s ease;
+    }
+    .logo-img:hover {
+      transform: rotate(360deg);
+    }
+    .footer-logo-img {
+      height: 32px;
+      width: 32px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid var(--accent);
+      vertical-align: middle;
+      margin-right: 8px;
+    }
+
+    /* Welcome Splash Screen */
+    .welcome-splash {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle at center, rgba(13, 27, 42, 0.98), rgba(6, 11, 20, 0.99));
+      z-index: 10000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: opacity 0.8s ease, visibility 0.8s;
+    }
+    .welcome-splash.fade-out {
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+    }
+    .splash-card {
+      background: rgba(255, 255, 255, 0.03);
+      backdrop-filter: blur(25px) saturate(180%);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 24px;
+      padding: 3rem 2.5rem;
+      text-align: center;
+      max-width: 450px;
+      width: 90%;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5), inset 0 0 15px rgba(255, 255, 255, 0.05);
+      transform: scale(0.9);
+      animation: splashScaleIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+    @keyframes splashScaleIn {
+      to { transform: scale(1); }
+    }
+    .splash-logo-container {
+      width: 90px;
+      height: 90px;
+      margin: 0 auto 1.5rem auto;
+      border-radius: 50%;
+      padding: 3px;
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      box-shadow: 0 0 25px rgba(0, 180, 216, 0.4);
+      animation: logoPulse 2s infinite ease-in-out;
+    }
+    .splash-logo {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+    .splash-title {
+      font-family: var(--font-heading);
+      font-size: 2.2rem;
+      font-weight: 800;
+      color: var(--white);
+      margin-bottom: 0.5rem;
+      line-height: 1.2;
+    }
+    .splash-title span {
+      background: linear-gradient(135deg, #00b4d8, #f72585);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .splash-subtitle {
+      font-size: 1rem;
+      color: rgba(255, 255, 255, 0.6);
+      margin-bottom: 2rem;
+      letter-spacing: 0.5px;
+    }
+    .splash-loader {
+      position: relative;
+      width: 40px;
+      height: 40px;
+      margin: 0 auto;
+    }
+    .loader-circle {
+      width: 100%;
+      height: 100%;
+      border: 3px solid rgba(255, 255, 255, 0.05);
+      border-top-color: var(--accent);
+      border-radius: 50%;
+      animation: loaderSpin 1s linear infinite;
+    }
+    @keyframes loaderSpin {
+      to { transform: rotate(360deg); }
+    }
+    @keyframes logoPulse {
+      0%, 100% { transform: scale(1); box-shadow: 0 0 25px rgba(0, 180, 216, 0.4); }
+      50% { transform: scale(1.05); box-shadow: 0 0 35px rgba(247, 37, 133, 0.6); }
+    }
+
+    /* Fleet & Pricing Section CSS (Glassmorphism) */
+    .fleet-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2.5rem;
+      margin-top: 2rem;
+    }
+    .fleet-card {
+      background: rgba(255, 255, 255, 0.03);
+      backdrop-filter: blur(12px) saturate(160%);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 20px;
+      overflow: hidden;
+      transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.4s ease, border-color 0.4s ease;
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+    }
+    .fleet-card:hover {
+      transform: translateY(-8px);
+      border-color: rgba(255, 255, 255, 0.2);
+      box-shadow: 0 15px 30px rgba(0, 180, 216, 0.15);
+    }
+    .fleet-img-wrap {
+      position: relative;
+      height: 200px;
+      overflow: hidden;
+    }
+    .fleet-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+    .fleet-card:hover .fleet-img-wrap img {
+      transform: scale(1.08);
+    }
+    .fleet-price-badge {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      background: linear-gradient(135deg, var(--accent), #f72585);
+      color: var(--white);
+      padding: 6px 14px;
+      border-radius: 30px;
+      font-weight: 700;
+      font-size: 14.5px;
+      box-shadow: 0 4px 15px rgba(247, 37, 133, 0.4);
+      letter-spacing: 0.5px;
+    }
+    .fleet-content {
+      padding: 1.75rem;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+    .fleet-content h3 {
+      font-family: var(--font-heading);
+      font-size: 21px;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 4px;
+    }
+    .fleet-type {
+      font-size: 13.5px;
+      color: var(--primary);
+      font-weight: 600;
+      margin-bottom: 1.25rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .fleet-features {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 1.75rem 0;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .fleet-features li {
+      font-size: 14px;
+      color: rgba(255, 255, 255, 0.7);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .fleet-features li i {
+      color: var(--accent);
+    }
+    .fleet-content .btn {
+      margin-top: auto;
+      width: 100%;
+      text-align: center;
+    }
+
     /* ==========================================
        RESPONSIVE MEDIA QUERIES
        ========================================== */
@@ -2056,6 +2266,10 @@
       }
       .snav {
         display: none;
+      }
+      .fleet-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
       }
     }
 
@@ -2219,10 +2433,31 @@
       .whatsapp-tooltip {
         display: none;
       }
+      .fleet-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+      .fleet-img-wrap {
+        height: 180px;
+      }
     }
   </style>
 </head>
 <body>
+
+  <!-- Welcome Splash Screen -->
+  <div class="welcome-splash" id="welcome-splash">
+    <div class="splash-card">
+      <div class="splash-logo-container">
+        <img src="images/logo.jpeg" alt="Vamsi Travels Logo" class="splash-logo">
+      </div>
+      <h1 class="splash-title">Welcome to<br><span>Vamsi Travels</span></h1>
+      <p class="splash-subtitle">Premium Tours & Pilgrimage Services</p>
+      <div class="splash-loader">
+        <div class="loader-circle"></div>
+      </div>
+    </div>
+  </div>
 
   <!-- ==========================================
        NAVIGATION BAR
@@ -2231,7 +2466,7 @@
     <div class="container navbar-container">
       <!-- Brand Logo -->
       <a href="#" class="logo-container">
-        <i data-lucide="compass" class="logo-icon"></i>
+        <img src="images/logo.jpeg" alt="Vamsi Travels Logo" class="logo-img">
         <span>VAMSI TRAVELS</span>
       </a>
 
@@ -2262,7 +2497,7 @@
   <div class="mobile-drawer" id="mobile-drawer">
     <div class="drawer-header">
       <a href="#" class="logo-container">
-        <i data-lucide="compass" class="logo-icon"></i>
+        <img src="images/logo.jpeg" alt="Vamsi Travels Logo" class="logo-img">
         <span>VAMSI</span>
       </a>
       <button class="drawer-close" id="drawer-close-btn">
@@ -2278,7 +2513,7 @@
       <a href="#testimonials" class="drawer-link" onclick="closeDrawer()">Testimonials</a>
     </div>
     <div class="drawer-footer">
-      <a href="tel:+919876543210" class="btn btn-outline" style="border-color: rgba(255,255,255,0.2);">
+      <a href="tel:+919885835375" class="btn btn-outline" style="border-color: rgba(255,255,255,0.2);">
         <i data-lucide="phone" size="18"></i> Call Us
       </a>
       <a href="#booking" class="btn btn-accent" onclick="closeDrawer()">
@@ -2306,7 +2541,7 @@
               <a href="#booking" class="btn btn-primary">
                 <i data-lucide="arrow-right-circle" size="20"></i> Book Now
               </a>
-              <a href="tel:+919876543210" class="btn btn-outline">
+              <a href="tel:+919885835375" class="btn btn-outline">
                 <i data-lucide="phone-call" size="20"></i> Call Us
               </a>
             </div>
@@ -2341,7 +2576,7 @@
               <a href="#services" class="btn btn-primary">
                 <i data-lucide="car" size="20"></i> View Fleet
               </a>
-              <a href="tel:+919876543210" class="btn btn-outline">
+              <a href="tel:+919885835375" class="btn btn-outline">
                 <i data-lucide="phone-call" size="20"></i> Call Us
               </a>
             </div>
@@ -2376,7 +2611,7 @@
               <a href="#booking" class="btn btn-primary">
                 <i data-lucide="ticket" size="20"></i> Book Darshan
               </a>
-              <a href="tel:+919876543210" class="btn btn-outline">
+              <a href="tel:+919885835375" class="btn btn-outline">
                 <i data-lucide="phone-call" size="20"></i> Call Us
               </a>
             </div>
@@ -2411,7 +2646,7 @@
               <a href="#packages" class="btn btn-primary">
                 <i data-lucide="map-pin" size="20"></i> View Packages
               </a>
-              <a href="tel:+919876543210" class="btn btn-outline">
+              <a href="tel:+919885835375" class="btn btn-outline">
                 <i data-lucide="phone-call" size="20"></i> Call Us
               </a>
             </div>
@@ -2446,7 +2681,7 @@
               <a href="#booking" class="btn btn-primary">
                 <i data-lucide="send" size="20"></i> Book Taxi
               </a>
-              <a href="tel:+919876543210" class="btn btn-outline">
+              <a href="tel:+919885835375" class="btn btn-outline">
                 <i data-lucide="phone-call" size="20"></i> Call Us
               </a>
             </div>
@@ -2481,7 +2716,7 @@
               <a href="#booking" class="btn btn-primary">
                 <i data-lucide="arrow-right-circle" size="20"></i> Get Quote
               </a>
-              <a href="tel:+919876543210" class="btn btn-outline">
+              <a href="tel:+919885835375" class="btn btn-outline">
                 <i data-lucide="phone-call" size="20"></i> Call Us
               </a>
             </div>
@@ -2794,7 +3029,7 @@
           <div class="package-img-container">
             <span class="package-badge">Airport / Drop</span>
             <span class="package-duration"><i data-lucide="clock" size="14"></i> 1 Day</span>
-            <img src="images/chennai.jpg" alt="Chennai Taxi Package" class="package-img">
+            <img src="images/chennai.webp" alt="Chennai Taxi Package" class="package-img">
           </div>
           <div class="package-body">
             <div class="package-header">
@@ -3004,7 +3239,7 @@
           <div class="package-img-container">
             <span class="package-badge package-badge-accent">Grand Heritage</span>
             <span class="package-duration"><i data-lucide="clock" size="14"></i> 5 Days</span>
-            <img src="images/tamilnadu.jpg" alt="Tamil Nadu Temple Gopuram" class="package-img">
+            <img src="images/tamilnadu.webp" alt="Tamil Nadu Temple Gopuram" class="package-img">
           </div>
           <div class="package-body">
             <div class="package-header">
@@ -3413,6 +3648,127 @@
   </section>
 
   <!-- ==========================================
+       AVAILABLE CARS & PRICING SECTION
+       ========================================== -->
+  <section class="section" id="fleet" style="background: linear-gradient(180deg, rgba(6,11,20,0.8), rgba(13,27,42,0.9)); position: relative;">
+    <div class="container">
+      <div class="section-header reveal">
+        <h2>Our Premium Fleet &amp; Pricing</h2>
+        <p>Choose from our wide range of well-maintained, comfortable vehicles with transparent, per-kilometer pricing.</p>
+      </div>
+      <div class="fleet-grid">
+        <!-- Card 1: Swift Dzire -->
+        <div class="fleet-card reveal reveal-scale delay-100">
+          <div class="fleet-img-wrap">
+            <img src="images/dzire.jpg" alt="Swift Dzire AC Sedan Cab">
+            <div class="fleet-price-badge">₹14/km</div>
+          </div>
+          <div class="fleet-content">
+            <h3>Swift Dzire</h3>
+            <p class="fleet-type">AC Sedan (4+1 Seater)</p>
+            <ul class="fleet-features">
+              <li><i data-lucide="check-circle-2" size="14"></i> 4 Passengers Capacity</li>
+              <li><i data-lucide="check-circle-2" size="14"></i> 2 Medium Bags</li>
+              <li><i data-lucide="check-circle-2" size="14"></i> Sanitized AC Cabin</li>
+            </ul>
+            <a href="#booking" class="btn btn-outline btn-sm" onclick="selectFleetVehicle('Swift Dzire (₹14/km)')">Book Sedan</a>
+          </div>
+        </div>
+        
+        <!-- Card 2: Maruti Ertiga -->
+        <div class="fleet-card reveal reveal-scale delay-200">
+          <div class="fleet-img-wrap">
+            <img src="images/ertiga.jpg" alt="Maruti Ertiga AC SUV Cab">
+            <div class="fleet-price-badge">₹18/km</div>
+          </div>
+          <div class="fleet-content">
+            <h3>Maruti Ertiga</h3>
+            <p class="fleet-type">AC MUV/SUV (6+1 Seater)</p>
+            <ul class="fleet-features">
+              <li><i data-lucide="check-circle-2" size="14"></i> 6 Passengers Capacity</li>
+              <li><i data-lucide="check-circle-2" size="14"></i> 3 Medium Bags</li>
+              <li><i data-lucide="check-circle-2" size="14"></i> Flexible Seating</li>
+            </ul>
+            <a href="#booking" class="btn btn-outline btn-sm" onclick="selectFleetVehicle('Maruti Ertiga (₹18/km)')">Book Ertiga</a>
+          </div>
+        </div>
+
+        <!-- Card 3: Innova Crysta -->
+        <div class="fleet-card reveal reveal-scale delay-300">
+          <div class="fleet-img-wrap">
+            <img src="images/inovaCrysta.jpg" alt="Innova Crysta AC SUV Cab">
+            <div class="fleet-price-badge">₹22/km</div>
+          </div>
+          <div class="fleet-content">
+            <h3>Innova Crysta</h3>
+            <p class="fleet-type">Premium AC SUV (7+1 Seater)</p>
+            <ul class="fleet-features">
+              <li><i data-lucide="check-circle-2" size="14"></i> 7 Passengers Capacity</li>
+              <li><i data-lucide="check-circle-2" size="14"></i> 4 Large Bags</li>
+              <li><i data-lucide="check-circle-2" size="14"></i> Captain Seats &amp; Luxury Ride</li>
+            </ul>
+            <a href="#booking" class="btn btn-outline btn-sm" onclick="selectFleetVehicle('Innova Crysta (₹22/km)')">Book Innova</a>
+          </div>
+        </div>
+
+        <!-- Card 4: Tempo Traveller -->
+        <div class="fleet-card reveal reveal-scale delay-100">
+          <div class="fleet-img-wrap">
+            <img src="images/tempo.jpg" alt="Tempo Traveller AC">
+            <div class="fleet-price-badge">₹33/km</div>
+          </div>
+          <div class="fleet-content">
+            <h3>Tempo Traveller</h3>
+            <p class="fleet-type">Standard AC Mini Coach (12+1 Seater)</p>
+            <ul class="fleet-features">
+              <li><i data-lucide="check-circle-2" size="14"></i> 12 Passengers Capacity</li>
+              <li><i data-lucide="check-circle-2" size="14"></i> Ample Luggage Space</li>
+              <li><i data-lucide="check-circle-2" size="14"></i> Pushback Seats &amp; TV/Music</li>
+            </ul>
+            <a href="#booking" class="btn btn-outline btn-sm" onclick="selectFleetVehicle('Tempo Traveller (₹33/km)')">Book Tempo</a>
+          </div>
+        </div>
+
+        <!-- Card 5: Force Urbania -->
+        <div class="fleet-card reveal reveal-scale delay-200">
+          <div class="fleet-img-wrap">
+            <img src="images/urbania.jpeg" alt="Force Urbania Luxury Coach">
+            <div class="fleet-price-badge">₹45/km</div>
+          </div>
+          <div class="fleet-content">
+            <h3>Force Urbania</h3>
+            <p class="fleet-type">Luxury AC Coach (16+1 Seater)</p>
+            <ul class="fleet-features">
+              <li><i data-lucide="check-circle-2" size="14"></i> 16 Passengers Capacity</li>
+              <li><i data-lucide="check-circle-2" size="14"></i> Huge Dedicated Boot Space</li>
+              <li><i data-lucide="check-circle-2" size="14"></i> Ultra-Premium Mercedes Engine Ride</li>
+            </ul>
+            <a href="#booking" class="btn btn-outline btn-sm" onclick="selectFleetVehicle('Force Urbania (₹45/km)')">Book Urbania</a>
+          </div>
+        </div>
+
+        <!-- Card 6: 30-Seater Bus -->
+        <div class="fleet-card reveal reveal-scale delay-300">
+          <div class="fleet-img-wrap">
+            <img src="images/sml.jpg" alt="30-Seater Luxury Bus">
+            <div class="fleet-price-badge">₹45/km</div>
+          </div>
+          <div class="fleet-content">
+            <h3>30-Seater Bus</h3>
+            <p class="fleet-type">Luxury Air-Conditioned Coach (30 Seater)</p>
+            <ul class="fleet-features">
+              <li><i data-lucide="check-circle-2" size="14"></i> 30 Passengers Capacity</li>
+              <li><i data-lucide="check-circle-2" size="14"></i> Heavy Under-Bus Storage</li>
+              <li><i data-lucide="check-circle-2" size="14"></i> Group Pilgrimages &amp; Tours</li>
+            </ul>
+            <a href="#booking" class="btn btn-outline btn-sm" onclick="selectFleetVehicle('30-Seater Bus (₹45/km)')">Book Bus</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
        FOOTER SECTION
        ========================================== -->
   <footer class="footer">
@@ -3421,11 +3777,11 @@
         
         <!-- Column 1: Brand -->
         <div class="footer-brand">
-          <h3><i data-lucide="compass" class="logo-icon"></i> Vamsi Travels</h3>
+          <h3><img src="images/logo.jpeg" alt="Vamsi Travels Logo" class="footer-logo-img"> Vamsi Travels</h3>
           <p>Your premier partner for seamless, spiritual pilgrimage tours to Tirupati and nearby shrines. Providing luxury transit, VIP darshan assistance, and custom family tour plans since 2016.</p>
           <div class="footer-socials">
             <a href="#" class="social-icon" aria-label="Facebook"><i data-lucide="facebook" size="18"></i></a>
-            <a href="#" class="social-icon" aria-label="Instagram"><i data-lucide="instagram" size="18"></i></a>
+            <a href="https://www.instagram.com/vamsitravelstirupati" target="_blank" class="social-icon" aria-label="Instagram"><i data-lucide="instagram" size="18"></i></a>
             <a href="#" class="social-icon" aria-label="Twitter"><i data-lucide="twitter" size="18"></i></a>
             <a href="#" class="social-icon" aria-label="Youtube"><i data-lucide="youtube" size="18"></i></a>
           </div>
@@ -3453,11 +3809,11 @@
           </div>
           <div class="footer-contact-item">
             <i data-lucide="phone" size="18" class="footer-contact-icon"></i>
-            <a href="tel:+919876543210">+91 98765 43210</a>
+            <a href="tel:+919885835375">+91 98858 35375</a>
           </div>
           <div class="footer-contact-item">
             <i data-lucide="mail" size="18" class="footer-contact-icon"></i>
-            <a href="mailto:info@vamsitravelstirupati.com">info@vamsitravelstirupati.com</a>
+            <a href="mailto:vamsitravelstirupati@gmail.com">vamsitravelstirupati@gmail.com</a>
           </div>
         </div>
 
@@ -3465,7 +3821,7 @@
         <div>
           <h4 class="footer-heading">Support & Chat</h4>
           <p style="font-size: 14.5px; margin-bottom: 1.5rem; line-height: 1.5;">Need instant help with VIP slots? Chat with a reservation manager now on WhatsApp for quick bookings.</p>
-          <a href="https://wa.me/919876543210?text=Hi%20Vamsi%20Travels,%20I%20would%20like%20to%20book%20a%20Tirupati%20Darshan%20package." target="_blank" class="footer-whatsapp-btn">
+          <a href="https://wa.me/919885835375?text=Hi%20Vamsi%20Travels,%20I%20would%20like%20to%20book%20a%20Tirupati%20Darshan%20package." target="_blank" class="footer-whatsapp-btn">
             <i data-lucide="message-square" size="18"></i> Chat on WhatsApp
           </a>
         </div>
@@ -3933,8 +4289,33 @@
     // FLOATING WHATSAPP INTERACTION
     // ==========================================
     function openWhatsAppChat() {
-      const url = "https://wa.me/919876543210?text=Hi%20Vamsi%20Travels,%20I%20would%20like%20to%20enquire%20about%20a%20Tirupati%20pilgrimage%20package.";
+      const url = "https://wa.me/919885835375?text=Hi%20Vamsi%20Travels,%20I%20would%20like%20to%20enquire%20about%20a%20Tirupati%20pilgrimage%20package.";
       window.open(url, '_blank');
+    }
+
+    // Welcome Splash Screen Fade Out
+    document.addEventListener('DOMContentLoaded', () => {
+      setTimeout(() => {
+        const splash = document.getElementById('welcome-splash');
+        if (splash) {
+          splash.classList.add('fade-out');
+        }
+      }, 2200);
+    });
+
+    // Auto-select Vehicle in booking form
+    function selectFleetVehicle(vehicleName) {
+      const selectEl = document.getElementById('package-select');
+      if (selectEl) {
+        selectEl.value = 'custom-cab';
+      }
+      const msgEl = document.getElementById('message');
+      if (msgEl) {
+        msgEl.value = `I want to book the following vehicle: ${vehicleName}. Please contact me with availability and details.`;
+        // Trigger focus state for label floating
+        msgEl.focus();
+      }
+      document.getElementById('booking').scrollIntoView({behavior: 'smooth'});
     }
   </script>
 </body>
