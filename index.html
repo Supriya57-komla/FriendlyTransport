@@ -2456,6 +2456,202 @@
         height: 180px;
       }
     }
+
+    /* ==========================================
+       USER REVIEWS & RATING FORM
+       ========================================== */
+    .reviews-section-layout {
+      display: grid;
+      grid-template-columns: 1.2fr 1.8fr;
+      gap: 3rem;
+      align-items: start;
+    }
+    
+    .review-form-card {
+      background: rgba(255, 255, 255, 0.45);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      border-radius: 20px;
+      padding: 2rem;
+      box-shadow: var(--shadow-lg);
+    }
+    
+    .rating-stars-container {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 1.5rem;
+    }
+    
+    .rating-star-icon {
+      font-size: 28px;
+      color: #cbd5e1; /* slate 300 */
+      cursor: pointer;
+      transition: color 0.2s ease, transform 0.2s ease;
+    }
+    
+    .rating-star-icon.active,
+    .rating-star-icon:hover {
+      color: var(--accent); /* Amber */
+      transform: scale(1.15);
+    }
+    
+    .reviews-list-container {
+      max-height: 520px;
+      overflow-y: auto;
+      padding-right: 15px;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+    
+    /* Scrollbar Styling for Reviews */
+    .reviews-list-container::-webkit-scrollbar {
+      width: 6px;
+    }
+    .reviews-list-container::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    .reviews-list-container::-webkit-scrollbar-thumb {
+      background: rgba(15, 23, 42, 0.15);
+      border-radius: 10px;
+    }
+    
+    .user-review-card {
+      background: var(--white);
+      border: 1px solid var(--border-light);
+      border-radius: 15px;
+      padding: 1.5rem;
+      box-shadow: var(--shadow-sm);
+      transition: transform 0.3s ease;
+    }
+    
+    .user-review-card:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+    }
+    
+    .review-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 0.8rem;
+    }
+    
+    .review-user-info {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    
+    .review-user-avatar {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid var(--border-light);
+    }
+    
+    .review-user-name {
+      font-weight: 600;
+      color: var(--primary);
+      font-size: 15px;
+    }
+    
+    .review-date {
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+    
+    .review-stars {
+      color: var(--accent);
+      display: flex;
+      gap: 2px;
+    }
+    
+    .review-text {
+      color: var(--text-main);
+      font-size: 14.5px;
+      line-height: 1.5;
+    }
+    
+    /* ==========================================
+       UPI PAYMENT MODAL AESTHETICS
+       ========================================== */
+    .payment-modal-card {
+      max-width: 480px !important;
+      padding: 2.5rem !important;
+      text-align: center;
+    }
+    
+    .upi-qr-wrapper {
+      background: var(--white);
+      border: 2px dashed rgba(37, 99, 235, 0.25);
+      border-radius: 15px;
+      padding: 1.2rem;
+      margin: 1.5rem auto;
+      width: fit-content;
+      position: relative;
+    }
+    
+    .upi-qr-image {
+      width: 200px;
+      height: 200px;
+      display: block;
+      border-radius: 8px;
+    }
+    
+    .payment-security-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(37, 211, 102, 0.1);
+      color: #128C7E;
+      font-size: 13px;
+      font-weight: 600;
+      padding: 0.4rem 1rem;
+      border-radius: 50px;
+      margin-bottom: 1rem;
+    }
+    
+    .payment-instructions {
+      font-size: 14px;
+      color: var(--text-muted);
+      line-height: 1.5;
+      margin-bottom: 1.5rem;
+    }
+    
+    .booking-summary-box {
+      background: rgba(15, 23, 42, 0.03);
+      border-radius: 10px;
+      padding: 1rem;
+      margin-bottom: 1.25rem;
+      text-align: left;
+      font-size: 14px;
+    }
+    
+    .summary-line {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 4px;
+    }
+    .summary-line:last-child {
+      margin-bottom: 0;
+    }
+    .summary-label {
+      color: var(--text-muted);
+    }
+    .summary-value {
+      font-weight: 600;
+      color: var(--primary);
+    }
+    
+    @media (max-width: 992px) {
+      .reviews-section-layout {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+      }
+    }
   </style>
 </head>
 <body>
@@ -3495,15 +3691,57 @@
     </div>
   </section>
 
-  <!-- Form Success Modal -->
+  <!-- Form Success & UPI Payment Modal -->
   <div class="success-modal" id="success-modal">
-    <div class="success-card">
-      <div class="success-icon-container">
-        <i data-lucide="badge-check" size="48"></i>
+    <div class="success-card payment-modal-card">
+      <div class="payment-security-badge">
+        <i data-lucide="shield-check" size="16"></i> Secure Booking &amp; Payment
       </div>
-      <h3>Booking Request Sent!</h3>
-      <p>Thank you for choosing Vamsi Travels. A booking executive has received your details and will call you on your provided number within 15 minutes to confirm availability.</p>
-      <button class="btn btn-primary" onclick="closeSuccessModal()">Close</button>
+      <h3 style="margin-bottom: 0.5rem;">Booking Confirmed!</h3>
+      <p style="font-size: 14.5px; color: var(--text-muted); margin-bottom: 1rem;">
+        Your travel details have been reserved. To lock in your driver and vehicle immediately, please pay the booking amount through UPI.
+      </p>
+      
+      <!-- Booking Summary Box -->
+      <div class="booking-summary-box" id="payment-summary-box">
+        <div class="summary-line">
+          <span class="summary-label">Name:</span>
+          <span class="summary-value" id="summary-name">-</span>
+        </div>
+        <div class="summary-line">
+          <span class="summary-label">Date:</span>
+          <span class="summary-value" id="summary-date">-</span>
+        </div>
+        <div class="summary-line">
+          <span class="summary-label">Package:</span>
+          <span class="summary-value" id="summary-package">-</span>
+        </div>
+      </div>
+      
+      <!-- QR Code Frame -->
+      <div class="upi-qr-wrapper">
+        <img class="upi-qr-image" id="upi-qr-img" src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=upi%3A%2F%2Fpay%3Fpa%3D6300240254%40ybl%26pn%3DVamsi%2520Travels%26cu%3DINR%26tn%3DBooking%2520Deposit" alt="Scan to pay via UPI">
+      </div>
+      
+      <p class="payment-instructions">
+        Scan the QR Code with <strong>PhonePe, Google Pay, Paytm, or BHIM</strong>, or click the button below to pay directly on mobile.
+      </p>
+      
+      <!-- Mobile Deep Link Button -->
+      <div style="margin-bottom: 1.5rem;">
+        <a id="upi-mobile-link" href="upi://pay?pa=6300240254@ybl&pn=Vamsi%20Travels&amp;cu=INR&amp;tn=Booking%20Deposit" class="btn btn-whatsapp" style="width: 100%; border-color: var(--secondary); color: var(--secondary); justify-content: center;">
+          <i data-lucide="smartphone" size="18"></i> Pay via UPI App
+        </a>
+      </div>
+      
+      <div style="display: flex; flex-direction: column; gap: 10px;">
+        <button class="btn btn-primary" onclick="confirmPaymentWhatsApp()" style="width: 100%;">
+          <i data-lucide="message-circle" size="18"></i> I Have Paid, Send Details on WhatsApp
+        </button>
+        <button class="btn btn-outline" onclick="closeSuccessModal()" style="width: 100%; color: var(--text-muted); border-color: rgba(15, 23, 42, 0.15); background: transparent;">
+          Cancel &amp; Close
+        </button>
+      </div>
     </div>
   </div>
 
@@ -3678,6 +3916,58 @@
           <span class="indicator active" data-slide="0"></span>
           <span class="indicator" data-slide="1"></span>
           <span class="indicator" data-slide="2"></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       CLIENT REVIEWS SECTION
+       ========================================== -->
+  <section class="section" id="reviews" style="background-color: var(--bg-main);">
+    <div class="container">
+      <div class="section-header reveal">
+        <h2>Customer Reviews</h2>
+        <p>Read what our customers feel about their journeys with Vamsi Travels, or write your own review below.</p>
+      </div>
+      
+      <div class="reviews-section-layout">
+        <!-- Left: Write a Review Form -->
+        <div class="review-form-card reveal reveal-left">
+          <h3 style="margin-bottom: 1rem; color: var(--primary);">Share Your Experience</h3>
+          <p style="font-size: 14.5px; color: var(--text-muted); margin-bottom: 1.5rem;">Your feedback helps us maintain our premium travel standards.</p>
+          
+          <form id="review-submit-form" onsubmit="submitUserReview(event)">
+            <div class="form-group" style="margin-bottom: 1.5rem;">
+              <input type="text" id="review-author" class="form-input" placeholder=" " required style="background: rgba(255,255,255,0.8);">
+              <label for="review-author" class="form-label">Your Name</label>
+            </div>
+            
+            <div style="margin-bottom: 1rem;">
+              <label style="display: block; font-size: 14px; font-weight: 600; color: var(--text-main); margin-bottom: 8px;">Your Rating</label>
+              <div class="rating-stars-container" id="stars-selector">
+                <i class="rating-star-icon" data-rating="1" onclick="setFormRating(1)">★</i>
+                <i class="rating-star-icon" data-rating="2" onclick="setFormRating(2)">★</i>
+                <i class="rating-star-icon" data-rating="3" onclick="setFormRating(3)">★</i>
+                <i class="rating-star-icon" data-rating="4" onclick="setFormRating(4)">★</i>
+                <i class="rating-star-icon" data-rating="5" onclick="setFormRating(5)">★</i>
+              </div>
+            </div>
+            
+            <div class="form-group" style="margin-bottom: 1.5rem;">
+              <textarea id="review-content" class="form-input" placeholder=" " rows="4" required style="resize: none; background: rgba(255,255,255,0.8);"></textarea>
+              <label for="review-content" class="form-label">Write your review details...</label>
+            </div>
+            
+            <button type="submit" class="btn btn-primary" style="width: 100%;">
+              <i data-lucide="check-circle" size="18"></i> Submit Review
+            </button>
+          </form>
+        </div>
+        
+        <!-- Right: Reviews List -->
+        <div class="reviews-list-container reveal reveal-right" id="reviews-list">
+          <!-- Dynamically populated reviews go here -->
         </div>
       </div>
     </div>
@@ -4129,11 +4419,11 @@
     // BOOKING FORM LOGIC
     // ==========================================
     const successModal = document.getElementById('success-modal');
+    let lastBookingDetails = null;
 
     function handleFormSubmit(event) {
       event.preventDefault();
       
-      // Basic validation
       const name = document.getElementById('full-name').value.trim();
       const phone = document.getElementById('phone').value.trim();
       const date = document.getElementById('travel-date').value;
@@ -4142,25 +4432,50 @@
       const message = document.getElementById('message').value.trim();
 
       if (name && phone && date && packageSelected) {
-        // Construct the WhatsApp message text
-        let whatsappText = `Hi Vamsi Travels, I would like to make a secure booking:\n`;
-        whatsappText += `• Name: ${name}\n`;
-        whatsappText += `• Phone: ${phone}\n`;
-        whatsappText += `• Travel Date: ${date}\n`;
-        whatsappText += `• Selected Package: ${packageSelected}`;
-        if (message) {
-          whatsappText += `\n• Special Requests: ${message}`;
-        }
-        
-        // WhatsApp URL
-        const url = `https://wa.me/916300240254?text=${encodeURIComponent(whatsappText)}`;
-        
-        // Open WhatsApp in a new window/tab
-        window.open(url, '_blank');
+        // Extract price if available
+        const priceMatch = packageSelected.match(/₹[\d,]+/);
+        const amountVal = priceMatch ? priceMatch[0].replace(/[^\d]/g, '') : "1000";
+        const amountDisplay = priceMatch ? priceMatch[0] : "₹1,000 (Deposit)";
 
+        // Store details globally for the WhatsApp confirmation click
+        lastBookingDetails = { name, phone, date, packageSelected, message, amount: amountDisplay };
+
+        // Update modal summary info
+        document.getElementById('summary-name').innerText = name;
+        document.getElementById('summary-date').innerText = date;
+        document.getElementById('summary-package').innerText = `${packageSelected} (${amountDisplay})`;
+
+        // Build UPI Payment URLs
+        const upiNote = encodeURIComponent(`Booking for ${name}`);
+        const upiUri = `upi://pay?pa=6300240254@ybl&pn=Vamsi%20Travels&am=${amountVal}&cu=INR&tn=${upiNote}`;
+        
+        // Update QR Image and mobile button link
+        document.getElementById('upi-qr-img').src = `https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent(upiUri)}`;
+        document.getElementById('upi-mobile-link').href = upiUri;
+
+        // Show the payment modal
         successModal.classList.add('active');
         document.body.style.overflow = 'hidden';
       }
+    }
+
+    function confirmPaymentWhatsApp() {
+      if (!lastBookingDetails) return;
+      const { name, phone, date, packageSelected, message, amount } = lastBookingDetails;
+      
+      let whatsappText = `Hi Vamsi Travels, I have completed the UPI payment of ${amount} for my booking confirmation!\n\n`;
+      whatsappText += `• Name: ${name}\n`;
+      whatsappText += `• Phone: ${phone}\n`;
+      whatsappText += `• Travel Date: ${date}\n`;
+      whatsappText += `• Package: ${packageSelected}\n`;
+      if (message) {
+        whatsappText += `• Special Requests: ${message}\n`;
+      }
+      whatsappText += `• Payment Status: Paid via UPI (Pending Admin Verification)`;
+
+      const url = `https://wa.me/916300240254?text=${encodeURIComponent(whatsappText)}`;
+      window.open(url, '_blank');
+      closeSuccessModal();
     }
 
     function closeSuccessModal() {
@@ -4359,6 +4674,7 @@
           splash.classList.add('fade-out');
         }
       }, 2200);
+      initReviews(); // Initialize dynamic reviews system
     });
 
     // Auto-select Vehicle in booking form
@@ -4374,6 +4690,178 @@
         msgEl.focus();
       }
       document.getElementById('booking').scrollIntoView({behavior: 'smooth'});
+    }
+
+    // ==========================================
+    // CLIENT REVIEWS & RATING FORM LOGIC
+    // ==========================================
+    let formRating = 5; // default form rating
+
+    // Set star rating active states in form
+    function setFormRating(rating) {
+      formRating = rating;
+      const stars = document.querySelectorAll('#stars-selector .rating-star-icon');
+      stars.forEach(star => {
+        const val = parseInt(star.getAttribute('data-rating'));
+        if (val <= rating) {
+          star.classList.add('active');
+        } else {
+          star.classList.remove('active');
+        }
+      });
+    }
+
+    // Initial mock reviews data
+    const initialReviews = [
+      {
+        name: "Subramanian K.",
+        rating: 5,
+        date: "24 Jun 2026",
+        avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&h=200&q=80",
+        text: "We booked the 1-Day VIP Darshan package from Bangalore. The driver arrived exactly at 4:00 AM. He navigated the hills beautifully and helped us through the tonsuring and VIP entry queues. Highly recommended for families with elders."
+      },
+      {
+        name: "Priyah Sharma",
+        rating: 5,
+        date: "18 Jun 2026",
+        avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=200&h=200&q=80",
+        text: "Excellent coordination. Booking was done directly on WhatsApp, and everything was transparent. The Innova Crysta sent was spotless, clean, and smells pleasant. Driver Ramesh was extremely polite and patiently guided us throughout."
+      },
+      {
+        name: "Ananth Raghavan",
+        rating: 4,
+        date: "10 Jun 2026",
+        avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&h=200&q=80",
+        text: "Our Rahu Ketu Pooja package to Kalahasti was well planned. The accommodation provided in Tirupati was standard 3-star and premium. They made sure we had our darshan on time without any issues. Exceptional service!"
+      }
+    ];
+
+    // Initialize and render reviews list
+    function initReviews() {
+      let savedReviews = localStorage.getItem('vamsi_travel_reviews');
+      if (!savedReviews) {
+        localStorage.setItem('vamsi_travel_reviews', JSON.stringify(initialReviews));
+        savedReviews = JSON.stringify(initialReviews);
+      }
+      renderReviews(JSON.parse(savedReviews));
+      setFormRating(5); // reset stars selector state
+    }
+
+    // Render reviews list HTML
+    function renderReviews(reviews) {
+      const container = document.getElementById('reviews-list');
+      if (!container) return;
+      
+      // Sort reviews newest first (mock items are older, new additions go top)
+      const sortedReviews = [...reviews].reverse();
+      
+      container.innerHTML = sortedReviews.map(r => {
+        let starsHtml = "";
+        for (let i = 1; i <= 5; i++) {
+          starsHtml += `<span style="color: ${i <= r.rating ? 'var(--accent)' : '#cbd5e1'}; font-size: 16px;">★</span>`;
+        }
+        
+        return `
+          <div class="user-review-card">
+            <div class="review-header">
+              <div class="review-user-info">
+                <img src="${r.avatar}" alt="${r.name}" class="review-user-avatar">
+                <div>
+                  <div class="review-user-name">${r.name}</div>
+                  <div class="review-date">${r.date}</div>
+                </div>
+              </div>
+              <div class="review-stars">
+                ${starsHtml}
+              </div>
+            </div>
+            <p class="review-text">"${r.text}"</p>
+          </div>
+        `;
+      }).join('');
+    }
+
+    // Handle review form submission
+    function submitUserReview(e) {
+      e.preventDefault();
+      
+      const authorInput = document.getElementById('review-author');
+      const contentInput = document.getElementById('review-content');
+      
+      const name = authorInput.value.trim();
+      const text = contentInput.value.trim();
+      
+      if (name && text && formRating > 0) {
+        // Avatars pool for anonymous users
+        const avatarUrls = [
+          "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&h=200&q=80",
+          "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&w=200&h=200&q=80",
+          "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=200&h=200&q=80",
+          "https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?auto=format&fit=crop&w=200&h=200&q=80"
+        ];
+        const randomAvatar = avatarUrls[Math.floor(Math.random() * avatarUrls.length)];
+        
+        // Format current date
+        const options = { day: 'numeric', month: 'short', year: 'numeric' };
+        const formattedDate = new Date().toLocaleDateString('en-GB', options);
+        
+        const newReview = {
+          name,
+          rating: formRating,
+          date: formattedDate,
+          avatar: randomAvatar,
+          text
+        };
+        
+        // Fetch current reviews, push new, and save
+        const savedReviews = JSON.parse(localStorage.getItem('vamsi_travel_reviews') || "[]");
+        savedReviews.push(newReview);
+        localStorage.setItem('vamsi_travel_reviews', JSON.stringify(savedReviews));
+        
+        // Re-render and reset form
+        renderReviews(savedReviews);
+        authorInput.value = "";
+        contentInput.value = "";
+        setFormRating(5);
+        
+        // Show dynamic confirmation toast
+        showReviewConfirmation();
+      }
+    }
+
+    // Display a clean confirmation notification after review submission
+    function showReviewConfirmation() {
+      const toast = document.createElement('div');
+      toast.style.position = 'fixed';
+      toast.style.bottom = '2rem';
+      toast.style.left = '50%';
+      toast.style.transform = 'translateX(-50%) translateY(100px)';
+      toast.style.background = 'rgba(15, 23, 42, 0.9)';
+      toast.style.backdropFilter = 'blur(8px)';
+      toast.style.color = '#fff';
+      toast.style.padding = '1rem 2rem';
+      toast.style.borderRadius = '12px';
+      toast.style.boxShadow = '0 10px 25px rgba(0,0,0,0.2)';
+      toast.style.fontSize = '14.5px';
+      toast.style.fontWeight = '600';
+      toast.style.zIndex = '9999';
+      toast.style.transition = 'transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1)';
+      toast.innerText = '✨ Thank you! Your review has been added successfully.';
+      
+      document.body.appendChild(toast);
+      
+      // Animate in
+      setTimeout(() => {
+        toast.style.transform = 'translateX(-50%) translateY(0)';
+      }, 50);
+      
+      // Animate out
+      setTimeout(() => {
+        toast.style.transform = 'translateX(-50%) translateY(100px)';
+        setTimeout(() => {
+          toast.remove();
+        }, 400);
+      }, 3500);
     }
   </script>
 </body>
