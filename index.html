@@ -3720,7 +3720,7 @@
       
       <!-- QR Code Frame -->
       <div class="upi-qr-wrapper">
-        <img class="upi-qr-image" id="upi-qr-img" src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=upi%3A%2F%2Fpay%3Fpa%3D6300240254%40ybl%26pn%3DVamsi%2520Travels%26cu%3DINR%26tn%3DBooking%2520Deposit" alt="Scan to pay via UPI">
+        <img class="upi-qr-image" id="upi-qr-img" src="images/upi_qr.jpg" alt="Scan to pay via UPI">
       </div>
       
       <p class="payment-instructions">
@@ -4447,10 +4447,9 @@
 
         // Build UPI Payment URLs
         const upiNote = encodeURIComponent(`Booking for ${name}`);
-        const upiUri = `upi://pay?pa=6300240254@ybl&pn=Vamsi%20Travels&am=${amountVal}&cu=INR&tn=${upiNote}`;
+        const upiUri = `upi://pay?pa=6300240254@ybl&pn=Dabbi%20Vamsi&am=${amountVal}&cu=INR&tn=${upiNote}`;
         
-        // Update QR Image and mobile button link
-        document.getElementById('upi-qr-img').src = `https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent(upiUri)}`;
+        // Update mobile button link
         document.getElementById('upi-mobile-link').href = upiUri;
 
         // Show the payment modal
